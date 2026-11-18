@@ -15,7 +15,10 @@ Site de aluguel (rank and rent) do Mário Jorge. Ranqueia no Google para tele en
 - `src/data/servicos.ts`: 4 serviços (`/servicos/<slug>/`).
 - `src/data/bairros/*.json`: 16 bairros com texto único (`/bairros/<slug>/`); `src/data/cidades/*.json`: 5 cidades vizinhas (`/cidades/<slug>/`). Template comum: `src/components/PaginaLocal.astro`.
 - `src/data/faq.ts`: FAQ geral (página `/perguntas-frequentes/`; as marcadas `home: true` vão para a home).
-- `src/pages/blog/*.md`: artigos, layout `Post.astro`, frontmatter `titulo`, `tituloSeo`, `descricao`, `data`, `imagem`, `imagemAlt`, `palavraChave`, `faq`.
+- `src/pages/blog/*.md`: 32 artigos (18/11/2026), layout `Post.astro`, frontmatter `titulo`, `tituloSeo`, `descricao`, `data`, `silo`, `imagem`, `imagemAlt`, `palavraChave`, `faq`.
+- Silos do blog em `src/data/silos.ts` (contratar-cacamba, tamanhos-e-calculo, o-que-vai-na-cacamba, regras-e-descarte, entulho-por-obra), cada um com página pilar e categoria em `/blog/categoria/<silo>/`. O `Post.astro` mostra "Continue lendo" com o pilar e os irmãos do silo; as páginas de serviço listam os guias do silo correspondente. Todo artigo novo precisa de `silo` e de 2 a 4 links no texto (pilar, irmãos, serviço ou bairro).
+- Mapa da área de atendimento (Google Maps incorporado, lazy): `src/components/MapaAtendimento.astro`, na home, contato, lista de bairros e em cada bairro/cidade. Schema com geo e hasMap de Santa Maria no `Base.astro`.
+- Sem crédito da SVG no rodapé (decisão do Mário: não deixar rastro da rede de sites de aluguel).
 - Imagens: `public/images/<nome>.webp` (1600) e `<nome>-800.webp`, tamanhos em `src/data/imagens.json`. Fotos do Pexels; IDs usados em `src/data/pexels-usados.json` (não repetir, nem as dos sites 1 e 2). Hero é ilustração SVG própria (`CacambaArte.astro`).
 - Design minimalista (redesenho 18/11/2026): fundo branco + superfície #f6f5f3, texto #111827, cinza #5b6370, laranja #ea580c (texto #c2410c), verde WhatsApp #15803d. Fonte única Manrope variável. No celular: menu em gaveta, barra fixa de WhatsApp no rodapé, cards em trilho com rolagem lateral. Imagens com versões 480/800/1600.
 
@@ -28,7 +31,7 @@ Site de aluguel (rank and rent) do Mário Jorge. Ranqueia no Google para tele en
 - Lighthouse mobile depois do redesenho (18/11/2026): 100 em acessibilidade, boas práticas e SEO; desempenho 99–100.
 
 ## Rotinas
-- Plano de 8 semanas: 1 backlink por semana pela 8links (nunca comprar nem recarregar créditos, nunca digitar senhas) e 1 artigo novo a cada 2 semanas (temas no plano enviado ao Mário).
+- Plano de 8 semanas: 1 backlink por semana pela 8links (nunca comprar nem recarregar créditos, nunca digitar senhas) e 1 artigo novo a cada 2 semanas. Os temas do plano original já foram publicados; próximos sugeridos: troca de piso (quanto entulho), reforma de telhado, caçamba em condomínio, entulho depois de enchente/temporal.
 
 ## Combinados com o Mário
 - Quando precisar de uma confirmação dele, mandar notificação no celular.
