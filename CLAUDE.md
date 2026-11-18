@@ -22,6 +22,12 @@ Site de aluguel (rank and rent) do Mário Jorge. Ranqueia no Google para tele en
 - Imagens: `public/images/<nome>.webp` (1600) e `<nome>-800.webp`, tamanhos em `src/data/imagens.json`. Fotos do Pexels; IDs usados em `src/data/pexels-usados.json` (não repetir, nem as dos sites 1 e 2). Capa da home: foto real de caçamba (`capa-cacamba`, Pexels 9669805, recorte 1:1; 4:3 no celular). `CacambaArte.astro` (SVG antigo) ficou sem uso.
 - Design minimalista (redesenho 18/11/2026): fundo branco + superfície #f6f5f3, texto #111827, cinza #5b6370, laranja #ea580c (texto #c2410c), verde WhatsApp #15803d. Fonte única Manrope variável. No celular: menu em gaveta, barra fixa de WhatsApp no rodapé, cards em trilho com rolagem lateral. Imagens com versões 480/800/1600.
 
+## Analytics e Search Console
+- Google Analytics 4: propriedade "teleentulhosantamaria.com.br" (conta "Sites SVG", a401060034 / p565106086, fluxo 16370148776), ID `G-94MBZR8DC5`, em `src/components/Analytics.astro` (carregado no `Base`, a tag do Google só entra depois do `load`).
+- Evento `clique_whatsapp` em todo link wa.me, com `area` (topo, menu, capa, cta, barra_fixa, rodape, conteudo), `texto_link`, `pagina` e `tipo_pagina`.
+- Pendente: marcar `clique_whatsapp` como evento principal (estrela em Administrador > Eventos) quando ele aparecer, até 24 h depois do primeiro clique real.
+- Search Console: propriedade de domínio `sc-domain:teleentulhosantamaria.com.br`, verificada pela Cloudflare (TXT) em 18/11/2026. Sitemap enviado e indexação da home pedida no mesmo dia.
+
 ## Regras de conteúdo
 - Título 30–60 caracteres, descrição 130–155. Um H1 por página.
 - Honestidade: nada de endereço, CNPJ, avaliações, depoimentos, número de clientes, anos de mercado ou preço inventado. Preço só como fatores.
