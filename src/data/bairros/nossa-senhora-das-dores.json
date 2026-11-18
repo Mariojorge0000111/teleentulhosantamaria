@@ -1,0 +1,48 @@
+{
+  "slug": "nossa-senhora-das-dores",
+  "nome": "Nossa Senhora das Dores",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Nossa Senhora das Dores",
+  "descricao": "Caçamba de entulho no Nossa Senhora das Dores, Santa Maria: reforma de casa e prédio perto da avenida, com caçamba na rua transversal.",
+  "h1": "Caçamba de entulho no bairro Nossa Senhora das Dores",
+  "sobre": "O Nossa Senhora das Dores deve o nome à paróquia criada em 1937. É um bairro pequeno, de pouco mais de 1 km², no nordeste da cidade, cortado ao meio pela Avenida Nossa Senhora das Dores. O cruzamento da avenida com a Rua Euclides da Cunha virou o centro geográfico do bairro depois da redivisão de 2006.",
+  "secoes": [
+    {
+      "h2": "Avenida movimentada, caçamba na transversal",
+      "paragrafos": [
+        "A Avenida Nossa Senhora das Dores tem trânsito pesado em boa parte do dia. Para imóveis com frente para a avenida, o caminhão demora mais para manobrar e a caçamba ocupa uma faixa de grande fluxo. Se houver uma rua lateral ou um acesso pelos fundos, prefira esse ponto.",
+        "Nas ruas transversais, como Benjamim Constant, Bento Gonçalves e Dr. Becker Pinto, a manobra costuma ser mais simples."
+      ]
+    },
+    {
+      "h2": "Obras típicas do bairro",
+      "paragrafos": [
+        "Casas mais antigas e prédios residenciais pedem reforma de banheiro, cozinha, telhado e fachada. Em reforma de fachada, além de reboco e cerâmica, saem peças de esquadria; metal e vidro devem ser avisados antes, porque nem toda caçamba recebe misturado.",
+        "Mantenha a calçada limpa durante a obra. O Código de Posturas de Santa Maria exige que o passeio em frente à obra fique limpo e em condições para os pedestres."
+      ],
+      "lista": [
+        "Frente para a avenida: caçamba na transversal",
+        "Vidro e esquadria: avise no pedido",
+        "Calçada limpa durante toda a obra"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Minha casa fica na Avenida Nossa Senhora das Dores. Onde fica a caçamba?",
+      "r": "Se houver rua lateral ou acesso pelos fundos, ali. Se não houver, na pista junto ao meio-fio, com entrega em horário de menos trânsito."
+    },
+    {
+      "p": "Vidro de janela pode ir na caçamba?",
+      "r": "Depende da empresa e da área de destino. Informe no pedido, e embale os cacos para ninguém se ferir na carga."
+    }
+  ],
+  "proximos": [
+    "centro",
+    "nossa-senhora-de-lourdes",
+    "presidente-joao-goulart"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Nossa_Senhora_das_Dores_(Santa_Maria)"
+  ]
+}

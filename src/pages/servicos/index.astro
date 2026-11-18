@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import Cta from '../../components/Cta.astro';
+import Migalhas from '../../components/Migalhas.astro';
+import { SERVICOS } from '../../data/servicos';
+const migalhas = [{ nome: 'Serviços' }];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: SERVICOS.map((s, i) => ({ '@type': 'ListItem', position: i + 1, name: s.nome, url: new URL(`/servicos/${s.slug}/`, Astro.site).href })),
+};
+---
+<Base
+  title="Serviços de Caçamba e Entulho em Santa Maria RS"
+  description="Serviços de tele entulho em Santa Maria RS: aluguel de caçamba, recolhimento de entulho, caçamba para obra e reforma e guia de tamanhos de 3 a 5 m³."
+  schema={schema}
+  migalhas={migalhas}
+>
+  <header class="pagina-topo">
+    <div class="wrap">
+      <Migalhas itens={migalhas} />
+      <h1>Serviços de caçamba e entulho em Santa Maria</h1>
+      <p class="lead estreito">Tudo gira em torno da caçamba estacionária: ela chega vazia, fica na obra o tempo combinado e sai cheia para uma área licenciada. O que muda é o tipo de obra e o tamanho certo para ela.</p>
+    </div>
+  </header>
+  <section class="secao">
+    <div class="wrap grade grade-2">
+      {SERVICOS.map((s) => (
+        <article class="card card-img">
+          <Img nome={s.imagem} alt={s.imagemAlt} sizes="(max-width: 620px) 100vw, 560px" />
+          <div class="card-corpo">
+            <h2 style="font-size:1.4rem"><a href={`/servicos/${s.slug}/`} style="color:inherit;text-decoration:none">{s.nome}</a></h2>
+            <p>{s.curto}</p>
+            <a class="mais" href={`/servicos/${s.slug}/`}>Ver detalhes</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+  <Cta />
+</Base>

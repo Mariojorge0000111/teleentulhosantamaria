@@ -1,0 +1,48 @@
+{
+  "slug": "urlandia",
+  "nome": "Urlândia",
+  "prep": "na",
+  "titulo": "Caçamba de Entulho na Urlândia, Santa Maria",
+  "descricao": "Caçamba de entulho na Urlândia, Santa Maria: ampliação, reforma e limpeza de pátio no sul da cidade. Tamanho certo e descarte licenciado. Peça no WhatsApp.",
+  "h1": "Caçamba de entulho na Urlândia",
+  "sobre": "A Urlândia fica na região sul de Santa Maria e tem um nome curioso: vem de Carlos Uhr, que primeiro batizou a Vila Urlândia. Uhr mais lândia, algo como terra dos Uhr. Com quase 2,8 km², o bairro estava entre os dez mais populosos da cidade no Censo de 2010, com perto de 9 mil moradores e uma das maiores proporções de crianças e jovens.",
+  "secoes": [
+    {
+      "h2": "Bairro de famílias, obra de ampliação",
+      "paragrafos": [
+        "Onde há muitas famílias jovens, a obra mais comum é a que acompanha o crescimento da casa: um quarto a mais, um banheiro novo, a cozinha que vira área gourmet, a garagem fechada. São obras de volume médio, com entulho de alvenaria e cerâmica.",
+        "Se a obra vai ser feita por etapas ao longo de meses, não vale deixar a caçamba parada esperando. Peça uma caçamba por etapa: quebra, depois acabamento."
+      ]
+    },
+    {
+      "h2": "Ruas e acesso na Urlândia",
+      "paragrafos": [
+        "A Rua Carlos Uhr liga a Urlândia ao Uglione e ajuda o caminhão a circular pela região. Nas ruas residenciais, a caçamba fica em frente ao lote, na pista, ou dentro do pátio quando houver espaço e piso firme.",
+        "Em dia de chuva forte, terreno de chão batido pode não aguentar o peso do caminhão. Se o seu pátio é de terra, prefira a caçamba na rua."
+      ],
+      "lista": [
+        "Ampliação de um cômodo: 3 m³",
+        "Reforma com troca de telhado: 4 ou 5 m³",
+        "Pátio de terra: caçamba na rua em dia de chuva"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "A caçamba pode ficar no meu pátio de terra?",
+      "r": "Em tempo seco, geralmente sim. Com chão encharcado, o caminhão pode atolar ou marcar o terreno, e o mais seguro é deixar a caçamba na rua."
+    },
+    {
+      "p": "Vale pedir caçamba para cada etapa da obra?",
+      "r": "Em obras longas, sim. Assim você paga só pelos dias em que realmente usa a caçamba."
+    }
+  ],
+  "proximos": [
+    "uglione",
+    "duque-de-caxias",
+    "nossa-senhora-medianeira"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Urlândia"
+  ]
+}

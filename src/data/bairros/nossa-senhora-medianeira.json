@@ -1,0 +1,47 @@
+{
+  "slug": "nossa-senhora-medianeira",
+  "nome": "Nossa Senhora Medianeira",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Medianeira, Santa Maria",
+  "descricao": "Caçamba de entulho no Nossa Senhora Medianeira, Santa Maria: reforma de casa e apartamento perto da Basílica. Atenção às datas da Romaria.",
+  "h1": "Caçamba de entulho no bairro Nossa Senhora Medianeira",
+  "sobre": "O bairro Nossa Senhora Medianeira leva o nome da Basílica que é o ponto final da Romaria da Medianeira, a maior festa religiosa de Santa Maria. Com quase 1,9 km² na área central, faz divisa com o Centro, o Nossa Senhora de Lourdes, o Duque de Caxias, o Uglione e a Urlândia. Avenidas como a Ângelo Bolson e a Hélvio Basso cortam a região.",
+  "secoes": [
+    {
+      "h2": "Atenção às datas da Romaria",
+      "paragrafos": [
+        "No fim de semana da Romaria, o entorno da Basílica recebe muita gente e o trânsito muda. Se a sua obra fica perto do santuário, evite marcar entrega, troca ou retirada da caçamba nesses dias. Uma caçamba na rua no meio da multidão atrapalha e pode ficar presa até o movimento acabar.",
+        "Fora dessa época, o bairro tem rotina residencial e de comércio de rua, com acesso fácil pelas avenidas principais."
+      ]
+    },
+    {
+      "h2": "Reformas mais pedidas",
+      "paragrafos": [
+        "Casas e prédios residenciais de médio porte predominam. Reforma de apartamento, troca de piso e banheiro geram pouco volume; a caçamba de 3 m³ costuma resolver. Em casa com demolição de parede ou garagem, a de 4 m³ dá mais folga."
+      ],
+      "lista": [
+        "Apartamento: entulho em sacos até a caçamba na rua",
+        "Casa: caçamba no pátio ou junto ao meio-fio",
+        "Datas da Romaria: reagende entrega e retirada"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Posso ficar com a caçamba durante a Romaria?",
+      "r": "Pode, mas o ideal é evitar entrega e retirada nesses dias se a obra fica perto da Basílica. Combine o calendário no pedido."
+    },
+    {
+      "p": "Qual caçamba para reforma de apartamento no Medianeira?",
+      "r": "Normalmente a de 3 m³. Se for apartamento grande, com troca de todo o piso, considere a de 4 m³."
+    }
+  ],
+  "proximos": [
+    "nossa-senhora-de-lourdes",
+    "duque-de-caxias",
+    "uglione"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Nossa_Senhora_Medianeira_(Santa_Maria)"
+  ]
+}

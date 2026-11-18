@@ -1,0 +1,52 @@
+{
+  "slug": "centro",
+  "nome": "Centro",
+  "prep": "no",
+  "titulo": "Tele Entulho no Centro de Santa Maria | Caçamba",
+  "descricao": "Caçamba de entulho no Centro de Santa Maria: reforma de apartamento, prédio antigo e loja, com caçamba na pista e troca rápida. Peça orçamento no WhatsApp.",
+  "h1": "Caçamba de entulho no Centro de Santa Maria",
+  "sobre": "O Centro é onde Santa Maria começou. Em pouco menos de 2 km² ficam a Rua do Acampamento, a Praça Saldanha Marinho, o Calçadão Salvador Isaia e boa parte dos prédios mais antigos da cidade, alguns erguidos a partir dos anos 1930. É o bairro de reforma de apartamento, de sala comercial e de imóvel histórico, quase sempre sem recuo e com pouca vaga na frente.",
+  "secoes": [
+    {
+      "h2": "Como é pedir caçamba no Centro",
+      "paragrafos": [
+        "Na maioria dos endereços do Centro não há pátio nem garagem para receber a caçamba. Ela fica na pista, encostada ao meio-fio, com as faixas reflexivas que o Código de Posturas exige. Por isso o horário de entrega pesa mais aqui do que em outros bairros: cedo, antes do comércio abrir, a manobra do caminhão é mais rápida e atrapalha menos.",
+        "Em reforma de apartamento, o entulho desce em sacos pelo elevador de serviço ou pela escada, conforme o regulamento do prédio. Combine com o síndico o horário de barulho e de uso do elevador antes de marcar a caçamba, para ela não ficar parada na rua esperando material."
+      ]
+    },
+    {
+      "h2": "Prédios antigos, Calçadão e Vila Belga",
+      "paragrafos": [
+        "O Centro tem imóveis com proteção histórica, como os da Vila Belga, junto à antiga estação ferroviária, e prédios no entorno da Praça Saldanha Marinho. Obra em imóvel tombado costuma depender de autorização prévia; confirme com a prefeitura antes de quebrar qualquer coisa.",
+        "O Calçadão Salvador Isaia é exclusivo para pedestres. Quem reforma uma loja ali precisa receber a caçamba na rua transversal mais próxima e levar o entulho até ela. Avise isso no pedido para o orçamento já considerar a distância."
+      ],
+      "lista": [
+        "Entrega cedo, antes do movimento do comércio",
+        "Caçamba na pista, junto ao meio-fio, sem bloquear faixa de ônibus",
+        "Troca rápida para não ocupar a vaga por muitos dias"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Dá para colocar caçamba na rua no Centro de Santa Maria?",
+      "r": "Sim, na pista junto ao meio-fio, sinalizada com faixas reflexivas. O que não pode é material solto na calçada por mais de 6 horas, pelo Código de Posturas."
+    },
+    {
+      "p": "Minha loja fica no Calçadão. Onde fica a caçamba?",
+      "r": "Na rua transversal mais próxima onde o caminhão consegue parar. Informe o endereço exato da loja para combinar o ponto."
+    },
+    {
+      "p": "Reformo um apartamento no Centro. Preciso de caçamba grande?",
+      "r": "Quase sempre não. Reforma de apartamento gera pouco volume, e uma caçamba menor costuma resolver. Mande o que vai ser quebrado para receber a indicação."
+    }
+  ],
+  "proximos": [
+    "nossa-senhora-de-fatima",
+    "nossa-senhora-de-lourdes",
+    "nossa-senhora-das-dores"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Centro_(Santa_Maria)"
+  ]
+}

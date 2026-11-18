@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import Faq from '../components/Faq.astro';
+import Cta from '../components/Cta.astro';
+import Migalhas from '../components/Migalhas.astro';
+import { FAQ, FAQ_TODAS } from '../data/faq';
+import { FONTES } from '../config';
+const migalhas = [{ nome: 'Perguntas frequentes' }];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_TODAS.map((f) => ({ '@type': 'Question', name: f.p, acceptedAnswer: { '@type': 'Answer', text: f.r } })),
+};
+---
+<Base
+  title="Perguntas Frequentes sobre Caçamba de Entulho"
+  description="Dúvidas sobre caçamba de entulho em Santa Maria RS: o que pode e não pode, prazo, tamanhos, preço, regras da prefeitura, CTR e caçamba na rua."
+  schema={schema}
+  migalhas={migalhas}
+>
+  <header class="pagina-topo">
+    <div class="wrap">
+      <Migalhas itens={migalhas} />
+      <h1>Perguntas frequentes sobre caçamba de entulho</h1>
+      <p class="lead estreito">Respostas diretas sobre como funciona o tele entulho em Santa Maria, o que vai na caçamba, como escolher o tamanho e o que a prefeitura exige.</p>
+    </div>
+  </header>
+  <section class="secao">
+    <div class="wrap estreito">
+      {FAQ.map((g) => (
+        <>
+          <h2 style="margin-top:2rem">{g.titulo}</h2>
+          <Faq itens={g.itens} />
+        </>
+      ))}
+      <p class="fonte" style="margin-top:2rem">Regras municipais citadas: <a href={FONTES.decreto146} target="_blank" rel="noopener">Decreto Executivo nº 146/2009</a> (Plano Integrado de Gerenciamento dos Resíduos da Construção Civil) e <a href={FONTES.codigoPosturas} target="_blank" rel="noopener">Lei Complementar nº 92/2012</a> (Código de Posturas), ambos no site da Câmara de Vereadores de Santa Maria. Classes de resíduos conforme a Resolução Conama nº 307/2002.</p>
+    </div>
+  </section>
+  <Cta titulo="Não achou sua dúvida?" texto="Pergunte direto pelo WhatsApp. Se puder, mande uma foto do entulho e o endereço da obra." />
+</Base>

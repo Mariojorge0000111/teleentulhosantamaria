@@ -1,0 +1,52 @@
+{
+  "slug": "camobi",
+  "nome": "Camobi",
+  "prep": "em",
+  "titulo": "Tele Entulho em Camobi, Santa Maria | Caçamba",
+  "descricao": "Caçamba de entulho em Camobi, Santa Maria: obra nova, reforma de kitnet perto da UFSM e limpeza de terreno. Orçamento rápido pelo WhatsApp.",
+  "h1": "Tele entulho e caçamba de entulho em Camobi",
+  "sobre": "Camobi é o maior bairro do distrito da Sede, com mais de 20 km² na região leste de Santa Maria. Cresceu em volta da Universidade Federal de Santa Maria e da Base Aérea, e não para de ganhar prédios, condomínios e loteamentos. O nome vem do guarani e lembra os dois morros arredondados da subida para o Centro.",
+  "secoes": [
+    {
+      "h2": "Obras típicas em Camobi",
+      "paragrafos": [
+        "Muita obra nova: casas em loteamento, sobrados e pequenos prédios para estudante. Isso gera entulho em etapas, da fundação ao acabamento, e funciona melhor com uma caçamba fixa e trocas programadas.",
+        "Também é forte a reforma de kitnet e apartamento perto do campus, quase sempre concentrada nas férias, entre um semestre e outro. Nessas épocas a procura por caçamba sobe no bairro; pedir com alguns dias de antecedência evita esperar."
+      ]
+    },
+    {
+      "h2": "Acesso: Evandro Behr, João Machado Soares e ruas internas",
+      "paragrafos": [
+        "A Avenida Prefeito Evandro Behr liga Camobi ao Centro e concentra o trânsito do bairro. A parte mais antiga cresceu junto da Avenida João Machado Soares, perto da antiga Estação Colônia, inaugurada em 1885 e renomeada Camobi em 1945. Nas ruas internas e nos loteamentos novos o acesso do caminhão costuma ser simples, mas vale conferir se a rua é calçada e se o caminhão consegue manobrar.",
+        "Em terreno amplo, a caçamba pode ficar dentro do lote, o que tira a caçamba da rua e dispensa preocupação com a vaga."
+      ],
+      "lista": [
+        "Obra nova: caçamba fixa com trocas",
+        "Reforma de kitnet: caçamba pequena, nas férias da UFSM",
+        "Terreno com espaço: caçamba dentro do lote"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Vocês entregam caçamba perto da UFSM?",
+      "r": "O pedido é feito pelo WhatsApp com o endereço em Camobi, e o prazo de entrega é informado no orçamento. Em época de férias da universidade a procura aumenta, então peça com antecedência."
+    },
+    {
+      "p": "Qual caçamba para limpeza de terreno em Camobi?",
+      "r": "Depende do material. Terra e entulho de obra vão na caçamba normal; galhos e restos de poda precisam ser avisados antes, porque nem toda área de destino aceita."
+    },
+    {
+      "p": "A caçamba pode ficar dentro do meu terreno?",
+      "r": "Pode, se houver espaço e piso firme para o caminhão encostar. Isso evita ocupar a rua durante a obra."
+    }
+  ],
+  "proximos": [
+    "centro",
+    "itarare",
+    "presidente-joao-goulart"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Camobi"
+  ]
+}

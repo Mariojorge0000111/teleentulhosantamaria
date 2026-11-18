@@ -1,0 +1,48 @@
+{
+  "slug": "pinheiro-machado",
+  "nome": "Pinheiro Machado",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Pinheiro Machado, Santa Maria",
+  "descricao": "Caçamba de entulho no Pinheiro Machado, Santa Maria: limpeza de pátio, ampliação e obra nova no antigo Parque Pinheiro Machado. Orçamento pelo WhatsApp.",
+  "h1": "Caçamba de entulho no Pinheiro Machado",
+  "sobre": "O Pinheiro Machado, no oeste de Santa Maria, até 2006 se chamava Parque Pinheiro Machado, nome da sua principal unidade residencial. Na redivisão daquele ano perdeu área para os novos bairros São João e Boi Morto, mas segue com mais de 3,5 km² e quase 11 mil moradores no Censo de 2010.",
+  "secoes": [
+    {
+      "h2": "Lotes com pátio e obras de quintal",
+      "paragrafos": [
+        "Muitos lotes do bairro têm pátio, e isso traz um tipo de pedido frequente: limpeza de quintal com sobras antigas de obra, terra, pedra e tijolo quebrado. Também é comum a construção de muro, garagem e edícula nos fundos.",
+        "Se o pátio tem entrada larga e chão firme, a caçamba pode ficar dentro do lote. Isso permite encher com calma, sem ocupar a rua."
+      ]
+    },
+    {
+      "h2": "Ruas de acesso",
+      "paragrafos": [
+        "Rua Pedro Luiz da Silva, Rua João Lino Pretto e a Estrada Municipal Capitão Vasco da Cunha estão entre as vias que delimitam e cortam o bairro. A BR-287 passa perto e facilita a chegada do caminhão.",
+        "Em limpeza de pátio, avise se há galhos, lixo ou móveis velhos misturados. A caçamba de entulho não recebe lixo doméstico, e móveis e poda precisam de combinação à parte."
+      ],
+      "lista": [
+        "Limpeza de pátio: 3 m³ costuma bastar",
+        "Muro e edícula: 3 ou 4 m³",
+        "Móveis velhos e poda: avise antes"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Posso colocar móveis velhos na caçamba?",
+      "r": "Móvel não é entulho de obra. Algumas empresas aceitam, outras não. Pergunte no pedido para não ter o material recusado."
+    },
+    {
+      "p": "A caçamba pode entrar no meu pátio?",
+      "r": "Se o portão for largo e o chão firme, sim. Mande uma foto da entrada pelo WhatsApp para a empresa avaliar."
+    }
+  ],
+  "proximos": [
+    "tancredo-neves",
+    "juscelino-kubitschek",
+    "nova-santa-marta"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Pinheiro_Machado_(Santa_Maria)"
+  ]
+}

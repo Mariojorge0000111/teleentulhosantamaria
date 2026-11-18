@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import Cta from '../../components/Cta.astro';
+import Migalhas from '../../components/Migalhas.astro';
+const posts = Object.values(import.meta.glob<any>('./*.md', { eager: true }))
+  .map((p) => ({ url: p.url, ...p.frontmatter }))
+  .sort((a, b) => (a.data < b.data ? 1 : -1));
+const migalhas = [{ nome: 'Blog' }];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Blog Tele Entulho Santa Maria',
+  url: new URL('/blog/', Astro.site).href,
+  blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.titulo, url: new URL(p.url, Astro.site).href, datePublished: p.data })),
+};
+---
+<Base
+  title="Blog: Guias sobre Caçamba e Entulho em Santa Maria"
+  description="Guias práticos sobre caçamba de entulho em Santa Maria RS: quanto custa, o que pode colocar, tamanhos, regras da prefeitura para caçamba na rua e descarte."
+  schema={schema}
+  migalhas={migalhas}
+>
+  <header class="pagina-topo">
+    <div class="wrap">
+      <Migalhas itens={migalhas} />
+      <h1>Guias sobre caçamba e entulho</h1>
+      <p class="lead estreito">O que saber antes de pedir caçamba em Santa Maria: preço, tamanho, o que pode ir dentro e o que a prefeitura exige.</p>
+    </div>
+  </header>
+  <section class="secao">
+    <div class="wrap grade grade-3">
+      {posts.map((p) => (
+        <article class="card card-img">
+          <Img nome={p.imagem} alt={p.imagemAlt} sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 370px" />
+          <div class="card-corpo">
+            <h2 style="font-size:1.2rem"><a href={p.url} style="color:inherit;text-decoration:none">{p.titulo}</a></h2>
+            <p>{p.descricao}</p>
+            <a class="mais" href={p.url}>Ler guia</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+  <Cta />
+</Base>

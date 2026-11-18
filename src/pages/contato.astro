@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import Migalhas from '../components/Migalhas.astro';
+import IconeWhats from '../components/IconeWhats.astro';
+import { SITE, linkWhatsapp } from '../config';
+const migalhas = [{ nome: 'Contato' }];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contato',
+  url: new URL('/contato/', Astro.site).href,
+};
+---
+<Base
+  title="Contato | Pedir Caçamba de Entulho em Santa Maria"
+  description="Peça caçamba de entulho em Santa Maria RS pelo WhatsApp. Informe endereço, bairro, tipo de entulho e data da obra para receber o orçamento sem compromisso."
+  schema={schema}
+  migalhas={migalhas}
+>
+  <header class="pagina-topo">
+    <div class="wrap">
+      <Migalhas itens={migalhas} />
+      <h1>Pedir caçamba de entulho</h1>
+      <p class="lead estreito">O atendimento é pelo WhatsApp. Para o orçamento sair rápido e certo, mande estas informações na primeira mensagem:</p>
+    </div>
+  </header>
+  <section class="secao">
+    <div class="wrap estreito">
+      <ul class="lista-check">
+        <li>Endereço da obra e bairro (ou cidade, se for fora de Santa Maria)</li>
+        <li>Tipo de entulho: alvenaria, telha, madeira, terra, material misturado</li>
+        <li>Quantidade aproximada ou fotos do entulho</li>
+        <li>Onde a caçamba pode ficar: dentro do terreno ou na rua</li>
+        <li>Data em que precisa da caçamba</li>
+      </ul>
+      <div class="botoes">
+        <a class="btn btn-whats" href={linkWhatsapp()} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Chamar no WhatsApp</a>
+      </div>
+      {SITE.horario && <p style="margin-top:1.5rem">Horário de atendimento: {SITE.horario}.</p>}
+      <p style="margin-top:1.5rem">O {SITE.nome} é um canal de orçamento de caçambas em Santa Maria e região. O serviço é executado por empresa parceira do ramo, responsável pela entrega, pela retirada e pela destinação do entulho.</p>
+    </div>
+  </section>
+</Base>

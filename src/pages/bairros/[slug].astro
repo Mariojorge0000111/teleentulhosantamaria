@@ -1,0 +1,9 @@
+---
+import PaginaLocal from '../../components/PaginaLocal.astro';
+import { BAIRROS, type Local } from '../../data/locais';
+export function getStaticPaths() {
+  return BAIRROS.map((l) => ({ params: { slug: l.slug }, props: { l } }));
+}
+const { l } = Astro.props as { l: Local };
+---
+<PaginaLocal l={l} tipo="bairro" />

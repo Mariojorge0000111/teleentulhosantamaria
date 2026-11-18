@@ -1,0 +1,43 @@
+{
+  "slug": "uglione",
+  "nome": "Uglione",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Uglione, Santa Maria",
+  "descricao": "Caçamba de entulho no Uglione, Santa Maria: bairro entre a BR-287, a Hélvio Basso e a Carlos Uhr. Reforma e limpeza com descarte licenciado.",
+  "h1": "Caçamba de entulho no Uglione",
+  "sobre": "O Uglione surgiu oficialmente em 2006, com área separada da Urlândia. O desenho é um triângulo, com três lados bem marcados: a BR-287, a Avenida Hélvio Basso e a Rua Carlos Uhr. São cerca de 0,7 km² e pouco mais de 1.800 moradores no Censo de 2010, um dos menores bairros do oeste de Santa Maria.",
+  "secoes": [
+    {
+      "h2": "Perto da BR-287",
+      "paragrafos": [
+        "Ficar colado à BR-287 tem uma vantagem prática: o caminhão chega e sai do bairro rápido, e o entulho segue para a área de destino sem atravessar o Centro. Para quem tem obra com várias trocas de caçamba, isso agiliza o serviço.",
+        "Na Avenida Hélvio Basso o trânsito é maior. Imóveis com frente para ela pedem entrega fora dos horários de pico."
+      ]
+    },
+    {
+      "h2": "Obras comuns",
+      "paragrafos": [
+        "Casas residenciais em bairro pequeno e consolidado geram pedidos de reforma de banheiro, cozinha, área de serviço e muros. São obras de volume pequeno a médio, que a caçamba de 3 m³ costuma atender.",
+        "Use a caçamba só para entulho de obra. Lixo doméstico misturado é proibido em Santa Maria e pode gerar multa para quem contratou."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Qual o melhor horário para receber caçamba na Hélvio Basso?",
+      "r": "Fora do pico da manhã e do fim da tarde. Combine o horário no pedido."
+    },
+    {
+      "p": "Posso jogar lixo da casa junto com o entulho?",
+      "r": "Não. O plano municipal de resíduos proíbe lixo doméstico na caçamba de entulho, com multa para o contratante."
+    }
+  ],
+  "proximos": [
+    "urlandia",
+    "duque-de-caxias",
+    "nossa-senhora-medianeira"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Uglione"
+  ]
+}

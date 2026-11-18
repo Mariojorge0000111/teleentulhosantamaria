@@ -1,0 +1,39 @@
+{
+  "slug": "silveira-martins",
+  "nome": "Silveira Martins",
+  "prep": "em",
+  "titulo": "Caçamba de Entulho em Silveira Martins RS",
+  "descricao": "Caçamba de entulho em Silveira Martins RS, berço da Quarta Colônia: reforma de casa antiga, obra e limpeza de terreno. Consulte no WhatsApp.",
+  "h1": "Caçamba de entulho em Silveira Martins",
+  "sobre": "Silveira Martins é conhecida como Berço da Quarta Colônia: foi ali que chegaram, em 1877, os primeiros imigrantes italianos da região central do Rio Grande do Sul. O município deixou de ser distrito de Santa Maria e foi instalado em 1989. Tem cerca de 119 km² e 2.028 moradores no Censo de 2022, e faz parte do Geoparque Mundial Unesco Quarta Colônia.",
+  "secoes": [
+    {
+      "h2": "Reforma de casa antiga",
+      "paragrafos": [
+        "Muitas casas do município têm décadas e técnicas antigas de construção. Reformar uma delas gera reboco grosso, tijolo maciço, telha e madeira. Antes de mandar tudo para a caçamba, separe o que pode ser reaproveitado: tijolo e madeira antigos em bom estado costumam ter uso.",
+        "Em imóveis com valor histórico, confirme com a prefeitura se há alguma regra de preservação antes de demolir."
+      ]
+    },
+    {
+      "h2": "Atendimento a partir de Santa Maria",
+      "paragrafos": [
+        "O atendimento em Silveira Martins é feito a partir de Santa Maria, conforme a agenda da empresa parceira e com possível taxa de deslocamento. Diga no pedido se a obra é na sede ou no interior, e se o acesso é asfaltado.",
+        "Como a viagem é maior, combine o prazo de permanência com folga e a retirada com antecedência."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Atendem o interior de Silveira Martins?",
+      "r": "Depende do acesso e da agenda. Envie a localidade e a condição da estrada pelo WhatsApp para confirmar."
+    },
+    {
+      "p": "Tijolo maciço antigo pode ir na caçamba?",
+      "r": "Pode, é entulho de alvenaria. Mas vale ver antes se ele não serve para reaproveitar na própria obra."
+    }
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Quarta_Colônia_de_Imigração_Italiana",
+    "https://www.ibge.gov.br/cidades-e-estados/rs/silveira-martins.html"
+  ]
+}

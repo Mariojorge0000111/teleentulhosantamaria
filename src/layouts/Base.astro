@@ -1,0 +1,187 @@
+---
+import { SITE, linkWhatsapp } from '../config';
+import { SERVICOS } from '../data/servicos';
+import IconeWhats from '../components/IconeWhats.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  schema?: object | object[];
+  migalhas?: { nome: string; href?: string }[];
+  ogType?: string;
+  ogImage?: string;
+  mensagem?: string;
+  preloadImg?: string;
+}
+
+const { title, description, schema, migalhas, ogType = 'website', ogImage = 'og', mensagem, preloadImg } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const comMarca = `${title} | ${SITE.nome}`;
+const fullTitle = title.includes('Tele Entulho') || comMarca.length > 60 ? title : comMarca;
+const imagemOg = new URL(`/images/${ogImage}.jpg`, Astro.site).href;
+const base = new URL('/', Astro.site).href;
+
+const organizacao = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${base}#organizacao`,
+  name: SITE.nome,
+  url: base,
+  logo: new URL('/favicon.svg', Astro.site).href,
+  description: SITE.slogan,
+  areaServed: { '@type': 'City', name: 'Santa Maria', containedInPlace: { '@type': 'State', name: 'Rio Grande do Sul' } },
+  ...(SITE.telefone ? { telephone: SITE.telefone } : {}),
+};
+const site = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${base}#site`,
+  name: SITE.nome,
+  url: base,
+  inLanguage: 'pt-BR',
+  publisher: { '@id': `${base}#organizacao` },
+};
+const trilha = migalhas && migalhas.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [{ nome: 'Início', href: '/' }, ...migalhas].map((m, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: m.nome,
+        item: new URL(m.href ?? Astro.url.pathname, Astro.site).href,
+      })),
+    }
+  : null;
+const schemas = [organizacao, site, ...(trilha ? [trilha] : []), ...(schema ? (Array.isArray(schema) ? schema : [schema]) : [])];
+
+const menu = [
+  { href: '/servicos/', nome: 'Serviços' },
+  { href: '/servicos/tamanhos-de-cacamba/', nome: 'Tamanhos' },
+  { href: '/bairros/', nome: 'Bairros' },
+  { href: '/perguntas-frequentes/', nome: 'Dúvidas' },
+  { href: '/blog/', nome: 'Blog' },
+  { href: '/contato/', nome: 'Contato' },
+];
+const atual = Astro.url.pathname;
+const wa = linkWhatsapp(mensagem);
+const bairrosRodape = [
+  ['centro', 'Centro'], ['camobi', 'Camobi'], ['nossa-senhora-de-lourdes', 'N. Sra. de Lourdes'],
+  ['tancredo-neves', 'Tancredo Neves'], ['juscelino-kubitschek', 'Juscelino Kubitschek'], ['itarare', 'Itararé'],
+];
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={imagemOg} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content={SITE.nome} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1f2933" />
+    <meta name="geo.region" content="BR-RS" />
+    <meta name="geo.placename" content="Santa Maria" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preload" href="/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    {preloadImg && <link rel="preload" as="image" href={`/images/${preloadImg}-800.webp`} imagesrcset={`/images/${preloadImg}-800.webp 800w, /images/${preloadImg}.webp 1600w`} imagesizes="(max-width: 900px) 100vw, 760px" fetchpriority="high" />}
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+  </head>
+  <body>
+    <a class="visualmente-oculto" href="#conteudo">Pular para o conteúdo</a>
+    <header class="topo">
+      <div class="wrap topo-inner">
+        <a href="/" class="marca" aria-label={`${SITE.nome}, página inicial`}>
+          <span class="marca-sinal" aria-hidden="true">
+            <svg width="20" height="16" viewBox="0 0 40 30"><path d="M2 4h36l-5 22H7z" fill="#fff"/><path d="M8 4l4-3h6l3 3M22 4l3-2h7l3 2" fill="none" stroke="#1f2933" stroke-width="2.5"/></svg>
+          </span>
+          <span>{SITE.nome}</span>
+        </a>
+        <nav aria-label="Menu principal">
+          <ul class="menu">
+            {menu.map((m) => <li><a href={m.href} aria-current={atual.startsWith(m.href) && !(m.href === '/servicos/' && atual.startsWith('/servicos/tamanhos')) ? 'page' : undefined}>{m.nome}</a></li>)}
+          </ul>
+          <details class="menu-mobile">
+            <summary>Menu</summary>
+            <ul>
+              <li><a href="/">Início</a></li>
+              {menu.map((m) => <li><a href={m.href}>{m.nome}</a></li>)}
+              <li><a href="/cidades/">Cidades vizinhas</a></li>
+            </ul>
+          </details>
+        </nav>
+        <a class="btn btn-sm btn-whats" href={wa} target="_blank" rel="noopener" data-evento="whatsapp">Pedir caçamba</a>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <slot />
+    </main>
+
+    <footer class="rodape">
+      <div class="wrap">
+        <div class="rodape-grade">
+          <div>
+            <a href="/" class="marca">
+              <span class="marca-sinal" aria-hidden="true">
+                <svg width="20" height="16" viewBox="0 0 40 30"><path d="M2 4h36l-5 22H7z" fill="#fff"/></svg>
+              </span>
+              <span>{SITE.nome}</span>
+            </a>
+            <p>{SITE.slogan}.</p>
+            {SITE.horario && <p>{SITE.horario}</p>}
+            <p><a href={wa} target="_blank" rel="noopener" data-evento="whatsapp">Orçamento pelo WhatsApp</a></p>
+          </div>
+          <div>
+            <p class="rodape-titulo">Serviços</p>
+            <ul>
+              {SERVICOS.map((s) => <li><a href={`/servicos/${s.slug}/`}>{s.nome}</a></li>)}
+              <li><a href="/perguntas-frequentes/">Perguntas frequentes</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="rodape-titulo">Bairros</p>
+            <ul>
+              {bairrosRodape.map(([s, n]) => <li><a href={`/bairros/${s}/`}>{n}</a></li>)}
+              <li><a href="/bairros/">Todos os bairros</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="rodape-titulo">Região</p>
+            <ul>
+              <li><a href="/cidades/itaara/">Itaara</a></li>
+              <li><a href="/cidades/silveira-martins/">Silveira Martins</a></li>
+              <li><a href="/cidades/sao-pedro-do-sul/">São Pedro do Sul</a></li>
+              <li><a href="/cidades/restinga-seca/">Restinga Sêca</a></li>
+              <li><a href="/cidades/formigueiro/">Formigueiro</a></li>
+              <li><a href="/blog/">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="rodape-fim">
+          <span>© {new Date().getFullYear()} {SITE.nome}. Santa Maria, RS.</span>
+          <span><a href="/contato/">Contato</a> · <a href="/privacidade/">Privacidade</a> · Fotos: Pexels</span>
+        </div>
+      </div>
+    </footer>
+
+    <a class="whats" href={wa} target="_blank" rel="noopener" aria-label="Pedir caçamba pelo WhatsApp" data-evento="whatsapp">
+      <span class="whats-icone" aria-hidden="true"><IconeWhats /></span>
+      <span class="whats-texto">Pedir caçamba</span>
+    </a>
+  </body>
+</html>

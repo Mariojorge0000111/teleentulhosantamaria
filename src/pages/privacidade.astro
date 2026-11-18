@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import Migalhas from '../components/Migalhas.astro';
+import { SITE } from '../config';
+const migalhas = [{ nome: 'Privacidade' }];
+---
+<Base title="Política de Privacidade" description={`Como o ${SITE.nome} trata as informações de quem pede orçamento de caçamba pelo site e pelo WhatsApp. Sem formulários e sem venda de dados.`} migalhas={migalhas}>
+  <header class="pagina-topo">
+    <div class="wrap">
+      <Migalhas itens={migalhas} />
+      <h1>Política de privacidade</h1>
+    </div>
+  </header>
+  <section class="secao">
+    <div class="wrap estreito">
+      <p>Este site não tem formulários e não pede cadastro. Quando você clica em um botão do WhatsApp, a conversa acontece no aplicativo do WhatsApp, com as regras de privacidade dele.</p>
+      <p>As informações que você envia na conversa (nome, endereço da obra, fotos) são usadas só para fazer o orçamento e agendar a entrega e a retirada da caçamba. Elas podem ser repassadas à empresa parceira que executa o serviço, apenas para esse fim. Não vendemos dados.</p>
+      <p>O site pode usar ferramentas de medição de audiência que registram dados de navegação de forma agregada, como páginas visitadas e cliques nos botões. Você pode bloquear cookies nas configurações do navegador.</p>
+      <p>Para pedir a exclusão de uma conversa ou tirar dúvidas sobre seus dados, envie uma mensagem pelo mesmo WhatsApp.</p>
+    </div>
+  </section>
+</Base>

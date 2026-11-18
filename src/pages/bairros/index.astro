@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cta from '../../components/Cta.astro';
+import Migalhas from '../../components/Migalhas.astro';
+import { BAIRROS, CIDADES } from '../../data/locais';
+const migalhas = [{ nome: 'Bairros' }];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Caçamba de entulho por bairro de Santa Maria',
+  itemListElement: BAIRROS.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.nome, url: new URL(`/bairros/${b.slug}/`, Astro.site).href })),
+};
+---
+<Base
+  title="Caçamba de Entulho por Bairro em Santa Maria RS"
+  description="Tele entulho nos bairros de Santa Maria RS: Centro, Camobi, Tancredo Neves, Itararé, Medianeira e mais. Dicas de acesso e de obra em cada bairro."
+  schema={schema}
+  migalhas={migalhas}
+>
+  <header class="pagina-topo">
+    <div class="wrap">
+      <Migalhas itens={migalhas} />
+      <h1>Caçamba de entulho por bairro em Santa Maria</h1>
+      <p class="lead estreito">Santa Maria tem 41 bairros no distrito da Sede, e cada um pede um cuidado diferente: rua estreita no Centro, obra nova em Camobi, ampliação de casa nas antigas Cohabs do oeste. Escolha o seu bairro para ver as dicas. Se ele não estiver na lista, peça do mesmo jeito pelo WhatsApp.</p>
+    </div>
+  </header>
+  <section class="secao">
+    <div class="wrap grade grade-3">
+      {BAIRROS.map((b) => (
+        <article class="card">
+          <h2 style="font-size:1.25rem"><a href={`/bairros/${b.slug}/`} style="color:inherit;text-decoration:none">{b.nome}</a></h2>
+          <p>{b.descricao}</p>
+          <a class="mais" href={`/bairros/${b.slug}/`}>Caçamba {b.prep} {b.nome}</a>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="secao secao-areia">
+    <div class="wrap">
+      <h2>Fora de Santa Maria</h2>
+      <p>Cidades vizinhas atendidas conforme a agenda da empresa parceira, com possível taxa de deslocamento.</p>
+      <ul class="chips">{CIDADES.map((c) => <li><a href={`/cidades/${c.slug}/`}>{c.nome}</a></li>)}</ul>
+    </div>
+  </section>
+  <Cta />
+</Base>

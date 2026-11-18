@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import Img from '../../components/Img.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Migalhas from '../../components/Migalhas.astro';
+import IconeWhats from '../../components/IconeWhats.astro';
+import { linkWhatsapp, FONTES } from '../../config';
+import { SERVICOS, type Servico } from '../../data/servicos';
+import { BAIRROS } from '../../data/locais';
+
+export function getStaticPaths() {
+  return SERVICOS.map((s) => ({ params: { slug: s.slug }, props: { s } }));
+}
+const { s } = Astro.props as { s: Servico };
+const base = new URL('/', Astro.site).href;
+const outros = SERVICOS.filter((o) => o.slug !== s.slug);
+const migalhas = [{ nome: 'Serviços', href: '/servicos/' }, { nome: s.nome }];
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: s.h1,
+    description: s.descricao,
+    serviceType: s.nome,
+    url: new URL(Astro.url.pathname, Astro.site).href,
+    provider: { '@id': `${base}#organizacao` },
+    areaServed: { '@type': 'City', name: 'Santa Maria', containedInPlace: { '@type': 'State', name: 'Rio Grande do Sul' } },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: s.faq.map((f) => ({ '@type': 'Question', name: f.p, acceptedAnswer: { '@type': 'Answer', text: f.r } })),
+  },
+];
+const wa = linkWhatsapp(s.mensagem);
+---
+<Base title={s.titulo} description={s.descricao} schema={schema} migalhas={migalhas} mensagem={s.mensagem} preloadImg={s.imagem}>
+  <header class="pagina-topo">
+    <div class="wrap">
+      <Migalhas itens={migalhas} />
+      <h1>{s.h1}</h1>
+      <p class="lead estreito">{s.intro}</p>
+      <div class="botoes">
+        <a class="btn btn-whats" href={wa} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Pedir orçamento no WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="secao">
+    <div class="wrap conteudo">
+      <div>
+        <figure><Img nome={s.imagem} alt={s.imagemAlt} prioridade /></figure>
+        {s.secoes.map((sec) => (
+          <>
+            <h2>{sec.h2}</h2>
+            {sec.paragrafos.map((p) => <p>{p}</p>)}
+            {sec.lista && <ul class="lista-check">{sec.lista.map((l) => <li>{l}</li>)}</ul>}
+          </>
+        ))}
+        <h2>Perguntas sobre {s.nome.toLowerCase()}</h2>
+        <Faq itens={s.faq} />
+        <p class="fonte" style="margin-top:1.5rem">Regras citadas: <a href={FONTES.decreto146} target="_blank" rel="noopener">Decreto Executivo nº 146/2009</a> e <a href={FONTES.codigoPosturas} target="_blank" rel="noopener">Lei Complementar nº 92/2012</a> de Santa Maria.</p>
+      </div>
+      <aside class="lateral">
+        <div class="box-cta">
+          <p class="h">Orçamento pelo WhatsApp</p>
+          <p>Mande endereço, bairro e tipo de entulho. Você recebe tamanho, valor e prazo antes de fechar.</p>
+          <a class="btn btn-whats" href={wa} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Chamar no WhatsApp</a>
+        </div>
+        <nav class="box-links" aria-label="Outros serviços">
+          <p class="h">Outros serviços</p>
+          <ul>{outros.map((o) => <li><a href={`/servicos/${o.slug}/`}>{o.nome}</a></li>)}</ul>
+        </nav>
+        <nav class="box-links" aria-label="Bairros">
+          <p class="h">Bairros de Santa Maria</p>
+          <ul>{BAIRROS.slice(0, 8).map((b) => <li><a href={`/bairros/${b.slug}/`}>Caçamba {b.prep} {b.nome}</a></li>)}</ul>
+        </nav>
+      </aside>
+    </div>
+  </section>
+  <Cta mensagem={s.mensagem} />
+</Base>

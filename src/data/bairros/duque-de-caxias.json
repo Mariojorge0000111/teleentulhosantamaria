@@ -1,0 +1,48 @@
+{
+  "slug": "duque-de-caxias",
+  "nome": "Duque de Caxias",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Duque de Caxias, Santa Maria",
+  "descricao": "Caçamba de entulho no bairro Duque de Caxias, Santa Maria: reforma em bairro compacto perto da Presidente Vargas e da Ângelo Bolson. Peça no WhatsApp.",
+  "h1": "Caçamba de entulho no bairro Duque de Caxias",
+  "sobre": "O Duque de Caxias é um dos menores bairros de Santa Maria, com cerca de 0,6 km² no oeste da cidade. Foi criado em 2006, separando a parte sul da Rua Orlando Fração, que era Urlândia, da parte norte, que era Medianeira. Fica entre a Avenida Presidente Vargas, a Avenida Ângelo Bolson e a Rua Carlos Uhr.",
+  "secoes": [
+    {
+      "h2": "Bairro pequeno e denso",
+      "paragrafos": [
+        "Num bairro compacto, as casas ficam próximas e as vagas na rua são disputadas. Antes da entrega, deixe o ponto da caçamba livre: um carro parado no lugar errado faz o caminhão voltar e atrasa a obra.",
+        "Como o deslocamento dentro do bairro é curto, trocar a caçamba é rápido. Em vez de uma caçamba grande ocupando a rua por muitos dias, duas trocas menores podem incomodar menos a vizinhança."
+      ]
+    },
+    {
+      "h2": "Acesso pelas avenidas",
+      "paragrafos": [
+        "A Presidente Vargas e a Ângelo Bolson dão saída rápida para o resto da cidade e para a BR-287. Nas ruas internas, a caçamba fica junto ao meio-fio, com o lado maior paralelo à calçada.",
+        "Converse com os vizinhos antes: avisar que a caçamba vai ficar alguns dias evita reclamação e ajuda a manter a vaga livre no dia da entrega."
+      ],
+      "lista": [
+        "Reserve o ponto da caçamba na véspera",
+        "Prefira trocas curtas a uma caçamba parada muitos dias",
+        "Avise os vizinhos sobre o período"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "E se tiver um carro no lugar combinado para a caçamba?",
+      "r": "O caminhão não consegue descarregar e a entrega pode ser reagendada. Por isso vale reservar o ponto na véspera."
+    },
+    {
+      "p": "Qual caçamba para reforma de casa no Duque de Caxias?",
+      "r": "Para reforma de um ou dois cômodos, a de 3 m³. Para a casa inteira, 4 ou 5 m³, ou trocas."
+    }
+  ],
+  "proximos": [
+    "urlandia",
+    "uglione",
+    "nossa-senhora-de-fatima"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Duque_de_Caxias_(Santa_Maria)"
+  ]
+}

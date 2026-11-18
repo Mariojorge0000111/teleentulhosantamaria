@@ -1,0 +1,39 @@
+{
+  "slug": "restinga-seca",
+  "nome": "Restinga Sêca",
+  "prep": "em",
+  "titulo": "Caçamba de Entulho em Restinga Sêca RS",
+  "descricao": "Caçamba de entulho em Restinga Sêca RS, na Quarta Colônia: obra, reforma e limpeza de terreno com destino licenciado. Consulte disponibilidade e frete.",
+  "h1": "Caçamba de entulho em Restinga Sêca",
+  "sobre": "Restinga Sêca fica a leste de Santa Maria e integra a região da Quarta Colônia. O nome da cidade se firmou com a estação ferroviária inaugurada em 1898, e o município foi emancipado de Cachoeira do Sul em 1959. São quase 969 km² e 14.939 moradores no Censo de 2022.",
+  "secoes": [
+    {
+      "h2": "Atendimento em Restinga Sêca",
+      "paragrafos": [
+        "A caçamba sai de Santa Maria, de acordo com a agenda da empresa parceira, com possível taxa de deslocamento. Envie pelo WhatsApp o endereço, o tipo de obra e fotos do entulho, se puder.",
+        "Para obras com bastante volume, combine trocas programadas logo no primeiro contato. Isso reduz viagens e o tempo de caçamba parada."
+      ]
+    },
+    {
+      "h2": "Obra na cidade e no interior",
+      "paragrafos": [
+        "Na área urbana, os pedidos mais comuns são reforma e ampliação de casa. No interior, entram galpão, muro, limpeza de área e reforma em propriedade rural. Em estrada de chão, informe a distância desde o asfalto.",
+        "Entulho de obra não deve ir para beira de lavoura, arroio ou banhado. Com a caçamba, o material segue para destino licenciado."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Atendem Restinga Sêca?",
+      "r": "Conforme a agenda da empresa parceira, com possível taxa de deslocamento. Confirme pelo WhatsApp com o endereço da obra."
+    },
+    {
+      "p": "Qual tamanho de caçamba para reforma de casa?",
+      "r": "Para um ou dois cômodos, a de 3 m³ costuma bastar. Reforma maior pede 4 ou 5 m³, ou trocas."
+    }
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Restinga_Sêca",
+    "https://www.ibge.gov.br/cidades-e-estados/rs/restinga-seca.html"
+  ]
+}

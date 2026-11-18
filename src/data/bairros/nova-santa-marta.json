@@ -1,0 +1,48 @@
+{
+  "slug": "nova-santa-marta",
+  "nome": "Nova Santa Marta",
+  "prep": "na",
+  "titulo": "Caçamba de Entulho na Nova Santa Marta",
+  "descricao": "Caçamba de entulho na Nova Santa Marta, Santa Maria: obra em etapas, ampliação e limpeza de terreno no oeste da cidade. Orçamento pelo WhatsApp.",
+  "h1": "Caçamba de entulho na Nova Santa Marta",
+  "sobre": "A Nova Santa Marta surgiu em 7 de dezembro de 1991, na área da antiga Fazenda Santa Marta, no oeste de Santa Maria. A data dá nome a uma das vilas do bairro, a 7 de Dezembro. Hoje são cerca de 2 km² e mais de 12 mil moradores no Censo de 2010, num bairro que ainda está em construção, casa por casa.",
+  "secoes": [
+    {
+      "h2": "Obra feita em etapas",
+      "paragrafos": [
+        "Na Nova Santa Marta muita casa é construída aos poucos: primeiro a base, depois as paredes, depois o reboco e o piso. Cada etapa gera um pouco de entulho. Em vez de acumular sobra no terreno por meses, o mais prático é chamar uma caçamba pequena ao fim de cada fase.",
+        "Entulho parado no lote junta água, atrai bicho e acaba indo parar na rua. Com a caçamba, o material sai documentado para uma área licenciada."
+      ]
+    },
+    {
+      "h2": "Acesso e posição da caçamba",
+      "paragrafos": [
+        "As vias principais, como a Rua Nossa Senhora das Graças e a Avenida Mallmann Filho, levam o caminhão até o bairro. Em ruas sem calçamento, informe no pedido: o motorista precisa saber se consegue entrar e manobrar com segurança.",
+        "Se a rua for estreita, a caçamba pode ficar dentro do terreno, desde que o chão aguente o peso."
+      ],
+      "lista": [
+        "Fim de cada etapa: caçamba de 3 m³",
+        "Rua sem calçamento: avise no pedido",
+        "Nada de entulho acumulado no lote por meses"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "O caminhão entra em rua sem calçamento?",
+      "r": "Em tempo seco, na maioria das vezes sim. Informe a condição da rua no pedido para o motorista avaliar com antecedência."
+    },
+    {
+      "p": "Tenho pouco entulho. Vale chamar caçamba?",
+      "r": "Se o volume é de alguns carrinhos, junte mais um pouco ou aproveite o fim de uma etapa. Abaixo de 1 m³, pergunte também pelo canal Linha Verde da prefeitura."
+    }
+  ],
+  "proximos": [
+    "juscelino-kubitschek",
+    "pinheiro-machado",
+    "tancredo-neves"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Nova_Santa_Marta"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "patronato",
+  "nome": "Patronato",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Patronato, Santa Maria",
+  "descricao": "Caçamba de entulho no Patronato, Santa Maria: reforma e limpeza de terreno perto da Presidente Vargas e da BR-287, com descarte licenciado.",
+  "h1": "Caçamba de entulho no Patronato",
+  "sobre": "O Patronato fica no oeste de Santa Maria, entre as avenidas Dois de Novembro, Liberdade e Presidente Vargas, a canalização do Arroio Cadena e a BR-287. Tem pouco mais de 1 km² e reúne vilas como Lídia, Arco-Íris e Natal. Em 2006 cedeu território para criar o bairro Noal e parte do Renascença e do Nossa Senhora de Fátima.",
+  "secoes": [
+    {
+      "h2": "Acesso fácil para o caminhão",
+      "paragrafos": [
+        "A proximidade com a BR-287 e com a Presidente Vargas facilita a chegada do caminhão poliguindaste e a saída do entulho para a área de destino. Nas vilas, as ruas são mais estreitas; vale indicar no pedido se há algum ponto em que o caminhão não consegue entrar.",
+        "Casas com pátio permitem colocar a caçamba dentro do lote. Quando não há espaço, ela fica na pista, junto ao meio-fio, sinalizada."
+      ]
+    },
+    {
+      "h2": "Obras comuns no bairro",
+      "paragrafos": [
+        "Ampliação de casa, troca de cobertura, construção de muro e limpeza de pátio são os pedidos mais típicos de um bairro residencial consolidado como o Patronato. Para limpeza de pátio com terra, pedra e restos de obra antigos, a caçamba de 3 m³ costuma bastar."
+      ],
+      "lista": [
+        "Ampliação e muro: 3 ou 4 m³",
+        "Telhado inteiro: 4 ou 5 m³, porque telha ocupa muito espaço",
+        "Pátio e terreno: avise se houver galhos"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "O caminhão da caçamba entra nas vilas do Patronato?",
+      "r": "Na maioria das ruas, sim. Se o acesso for estreito ou sem saída, diga no pedido para a empresa avaliar antes e combinar o melhor ponto."
+    },
+    {
+      "p": "Posso jogar galho de poda junto com o entulho?",
+      "r": "Só se a empresa aceitar. Poda tem destino diferente do entulho de obra, então informe a quantidade antes de fechar."
+    }
+  ],
+  "proximos": [
+    "duque-de-caxias",
+    "nossa-senhora-de-fatima",
+    "juscelino-kubitschek"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Patronato_(Santa_Maria)"
+  ]
+}

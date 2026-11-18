@@ -1,0 +1,118 @@
+---
+import Base from '../layouts/Base.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import Migalhas from './Migalhas.astro';
+import IconeWhats from './IconeWhats.astro';
+import { linkWhatsapp, FONTES } from '../config';
+import { SERVICOS } from '../data/servicos';
+import { BAIRROS, CIDADES, type Local } from '../data/locais';
+
+interface Props { l: Local; tipo: 'bairro' | 'cidade' }
+const { l, tipo } = Astro.props;
+const base = new URL('/', Astro.site).href;
+const ehBairro = tipo === 'bairro';
+const onde = ehBairro ? `${l.prep} ${l.nome}` : `${l.prep} ${l.nome}`;
+const mensagem = ehBairro
+  ? `Olá! Vim pelo site e preciso de caçamba de entulho no bairro ${l.nome}, em Santa Maria. Rua: `
+  : `Olá! Vim pelo site e preciso de caçamba de entulho em ${l.nome}. Vocês atendem? Endereço: `;
+const wa = linkWhatsapp(mensagem);
+const migalhas = ehBairro
+  ? [{ nome: 'Bairros', href: '/bairros/' }, { nome: l.nome }]
+  : [{ nome: 'Cidades vizinhas', href: '/cidades/' }, { nome: l.nome }];
+const vizinhos = ehBairro
+  ? (l.proximos ?? []).map((s) => BAIRROS.find((b) => b.slug === s)).filter(Boolean) as Local[]
+  : CIDADES.filter((c) => c.slug !== l.slug);
+const lugar = ehBairro
+  ? { '@type': 'Place', name: `${l.nome}, Santa Maria - RS`, containedInPlace: { '@type': 'City', name: 'Santa Maria' } }
+  : { '@type': 'City', name: l.nome, containedInPlace: { '@type': 'State', name: 'Rio Grande do Sul' } };
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: l.h1,
+    description: l.descricao,
+    serviceType: 'Aluguel de caçamba de entulho',
+    url: new URL(Astro.url.pathname, Astro.site).href,
+    provider: { '@id': `${base}#organizacao` },
+    areaServed: lugar,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: l.faq.map((f) => ({ '@type': 'Question', name: f.p, acceptedAnswer: { '@type': 'Answer', text: f.r } })),
+  },
+];
+const rotulos: Record<string, string> = {
+  'aluguel-de-cacamba': 'Aluguel de caçamba',
+  'recolhimento-de-entulho': 'Recolhimento de entulho',
+  'cacamba-para-obra-e-reforma': 'Caçamba para obra e reforma',
+  'tamanhos-de-cacamba': 'Qual tamanho de caçamba pedir',
+};
+---
+<Base title={l.titulo} description={l.descricao} schema={schema} migalhas={migalhas} mensagem={mensagem}>
+  <header class="pagina-topo">
+    <div class="wrap">
+      <Migalhas itens={migalhas} />
+      <h1>{l.h1}</h1>
+      <p class="lead estreito">{l.sobre}</p>
+      <div class="botoes">
+        <a class="btn btn-whats" href={wa} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Pedir caçamba {onde}</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="secao">
+    <div class="wrap conteudo">
+      <div>
+        {l.secoes.map((sec) => (
+          <>
+            <h2>{sec.h2}</h2>
+            {sec.paragrafos.map((p) => <p>{p}</p>)}
+            {sec.lista && <ul class="lista-check">{sec.lista.map((i) => <li>{i}</li>)}</ul>}
+          </>
+        ))}
+
+        <h2>Serviços de tele entulho {onde}</h2>
+        <ul class="lista-check">
+          {SERVICOS.map((s) => <li><a href={`/servicos/${s.slug}/`}>{rotulos[s.slug]}</a>: {s.curto.charAt(0).toLowerCase() + s.curto.slice(1)}</li>)}
+        </ul>
+
+        <div class="destaque">
+          <p><strong>Vale em toda Santa Maria:</strong> caçamba de no máximo 5 m³, sem entulho acima da borda e sem lixo doméstico misturado. O transporte sai com CTR para área licenciada. <a href="/blog/regras-para-cacamba-na-rua-em-santa-maria/">Veja as regras</a>.</p>
+        </div>
+
+        <h2>Perguntas sobre caçamba {onde}</h2>
+        <Faq itens={l.faq} />
+
+        <p class="fonte" style="margin-top:1.5rem">
+          Dados do {ehBairro ? 'bairro' : 'município'}: {l.fontes.map((f, i) => <>{i > 0 && ', '}<a href={f} target="_blank" rel="noopener nofollow">{new URL(f).hostname.replace('www.', '')}</a></>)}.
+          Regras: <a href={FONTES.decreto146} target="_blank" rel="noopener">Decreto nº 146/2009</a> e <a href={FONTES.codigoPosturas} target="_blank" rel="noopener">LC nº 92/2012</a>.
+        </p>
+      </div>
+      <aside class="lateral">
+        <div class="box-cta">
+          <p class="h">Caçamba {onde}</p>
+          <p>{ehBairro ? 'Mande a rua e o tipo de entulho. A mensagem já sai com o nome do bairro.' : 'Confirme a disponibilidade e a taxa de deslocamento antes de agendar a obra.'}</p>
+          <a class="btn btn-whats" href={wa} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Chamar no WhatsApp</a>
+        </div>
+        {vizinhos.length > 0 && (
+          <nav class="box-links" aria-label={ehBairro ? 'Bairros próximos' : 'Outras cidades'}>
+            <p class="h">{ehBairro ? 'Bairros próximos' : 'Outras cidades atendidas'}</p>
+            <ul>{vizinhos.map((v) => <li><a href={`/${ehBairro ? 'bairros' : 'cidades'}/${v.slug}/`}>Caçamba {v.prep} {v.nome}</a></li>)}</ul>
+          </nav>
+        )}
+        <nav class="box-links" aria-label="Guias">
+          <p class="h">Antes de pedir</p>
+          <ul>
+            <li><a href="/servicos/tamanhos-de-cacamba/">Tamanhos de caçamba</a></li>
+            <li><a href="/blog/quanto-custa-cacamba-de-entulho-em-santa-maria/">Quanto custa uma caçamba</a></li>
+            <li><a href="/blog/o-que-pode-e-o-que-nao-pode-na-cacamba-de-entulho/">O que pode na caçamba</a></li>
+            <li><a href="/perguntas-frequentes/">Perguntas frequentes</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </section>
+  <Cta titulo={`Precisa de caçamba ${onde}?`} mensagem={mensagem} />
+</Base>

@@ -1,0 +1,35 @@
+# teleentulhosantamaria · Tele Entulho Santa Maria (teleentulhosantamaria.com.br)
+
+Site de aluguel (rank and rent) do Mário Jorge. Ranqueia no Google para tele entulho / caçamba de entulho em Santa Maria (RS). Os leads vão para o WhatsApp dele (5555991438702) e ele mesmo os repassa. Quando o site for alugado, troca-se só o `src/config.ts` (nome, WhatsApp, horário, empresa).
+
+## Stack e publicação
+- Astro 7 + @astrojs/sitemap (com `lastmod`), Node 22 (`.node-version`). `trailingSlash: 'always'`, CSS inline.
+- Cloudflare Pages: cada push na `main` publica sozinho (build `npm run build`, saída `dist`).
+- Domínio: https://teleentulhosantamaria.com.br (registrado no Registro.br).
+- Sitemap: `/sitemap-index.xml`.
+- Antes de mexer: `git pull` (tarefas agendadas fazem commits na `main`).
+- Commits: autor `Mário Jorge <mariojorgefx@gmail.com>`, mensagem em português.
+
+## Onde fica cada coisa
+- `src/config.ts`: marca, WhatsApp, horário (vazio até ter empresa), links das leis.
+- `src/data/servicos.ts`: 4 serviços (`/servicos/<slug>/`).
+- `src/data/bairros/*.json`: 16 bairros com texto único (`/bairros/<slug>/`); `src/data/cidades/*.json`: 5 cidades vizinhas (`/cidades/<slug>/`). Template comum: `src/components/PaginaLocal.astro`.
+- `src/data/faq.ts`: FAQ geral (página `/perguntas-frequentes/`; as marcadas `home: true` vão para a home).
+- `src/pages/blog/*.md`: artigos, layout `Post.astro`, frontmatter `titulo`, `tituloSeo`, `descricao`, `data`, `imagem`, `imagemAlt`, `palavraChave`, `faq`.
+- Imagens: `public/images/<nome>.webp` (1600) e `<nome>-800.webp`, tamanhos em `src/data/imagens.json`. Fotos do Pexels; IDs usados em `src/data/pexels-usados.json` (não repetir, nem as dos sites 1 e 2). Hero é ilustração SVG própria (`CacambaArte.astro`).
+- Cores: laranja #e8590c / #b8460a, grafite #1f2933, areia #f7f3ec. Fontes Archivo + Source Sans 3.
+
+## Regras de conteúdo
+- Título 30–60 caracteres, descrição 130–155. Um H1 por página.
+- Honestidade: nada de endereço, CNPJ, avaliações, depoimentos, número de clientes, anos de mercado ou preço inventado. Preço só como fatores.
+- Regras locais citadas (conferidas em 18/11/2026 no site da Câmara): Decreto Executivo nº 146/2009 (caçamba máx. 5 m³, nada acima da borda e sem lixo doméstico = multa ao contratante, CTR, área licenciada pela SMPA, pequeno gerador até 3,5 m³) e LC nº 92/2012 (art. 61: material na via até 6 h; art. 62: faixas reflexivas; art. 63: passeio limpo).
+- Cidades vizinhas: sempre "conforme agenda da empresa parceira, com possível taxa de deslocamento".
+- Sem travessão longo e sem clichês de IA. Texto de cada bairro precisa ser único.
+- Lighthouse mobile em 18/11/2026: 100/100/100/100 na home, serviço e bairro.
+
+## Rotinas
+- Plano de 8 semanas: 1 backlink por semana pela 8links (nunca comprar nem recarregar créditos, nunca digitar senhas) e 1 artigo novo a cada 2 semanas (temas no plano enviado ao Mário).
+
+## Combinados com o Mário
+- Quando precisar de uma confirmação dele, mandar notificação no celular.
+- Responder em português.

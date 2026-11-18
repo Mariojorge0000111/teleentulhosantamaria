@@ -1,0 +1,39 @@
+{
+  "slug": "formigueiro",
+  "nome": "Formigueiro",
+  "prep": "em",
+  "titulo": "Caçamba de Entulho em Formigueiro RS",
+  "descricao": "Caçamba de entulho em Formigueiro RS: obra, reforma e limpeza de terreno com destino licenciado. Atendimento a partir de Santa Maria. Consulte no WhatsApp.",
+  "h1": "Caçamba de entulho em Formigueiro",
+  "sobre": "Formigueiro tem um dos nomes mais curiosos da região: diz a tradição que engenheiros de passagem compararam o lugar a um formigueiro de carretas e carreteiros parados para descanso. Hoje são cerca de 579 km² e 6.413 moradores no Censo de 2022, com economia apoiada na agropecuária e, principalmente, no arroz.",
+  "secoes": [
+    {
+      "h2": "Atendimento em Formigueiro",
+      "paragrafos": [
+        "Formigueiro fica a mais de 40 km de Santa Maria. O atendimento depende da agenda da empresa parceira e tem taxa de deslocamento. Para valer a viagem, planeje o volume com cuidado e diga logo se vai precisar de troca.",
+        "No pedido, informe se a obra é na cidade ou em propriedade rural e como é o acesso."
+      ]
+    },
+    {
+      "h2": "Obras rurais e galpões",
+      "paragrafos": [
+        "Em município agrícola, além de reforma de casa, aparecem obras em galpão, depósito e estrutura de lavoura. Concreto e alvenaria vão na caçamba. Telha de fibrocimento antiga pode conter amianto e não deve ir com o entulho comum.",
+        "Sucata metálica e madeira grande merecem conversa antes: às vezes vale vender ou reaproveitar."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Atendem Formigueiro?",
+      "r": "Conforme a agenda da empresa parceira e com taxa de deslocamento. Confirme pelo WhatsApp antes de marcar a obra."
+    },
+    {
+      "p": "Telha de fibrocimento velha vai na caçamba?",
+      "r": "Se houver suspeita de amianto, não. É resíduo perigoso e precisa de destinação própria."
+    }
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Formigueiro_(Rio_Grande_do_Sul)",
+    "https://www.ibge.gov.br/cidades-e-estados/rs/formigueiro.html"
+  ]
+}

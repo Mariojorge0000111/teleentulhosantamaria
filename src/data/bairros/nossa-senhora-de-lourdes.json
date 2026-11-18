@@ -1,0 +1,43 @@
+{
+  "slug": "nossa-senhora-de-lourdes",
+  "nome": "Nossa Senhora de Lourdes",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Nossa Senhora de Lourdes",
+  "descricao": "Caçamba de entulho no bairro Nossa Senhora de Lourdes, Santa Maria: reforma de casa e apartamento perto do Centro, com descarte licenciado. Peça orçamento.",
+  "h1": "Caçamba de entulho no bairro Nossa Senhora de Lourdes",
+  "sobre": "O Nossa Senhora de Lourdes fica colado ao Centro, entre a Avenida Nossa Senhora Medianeira, a Rua General Neto e a Avenida Nossa Senhora das Dores. O nome vem do Parque Residencial Nossa Senhora de Lourdes. Em 2006 o bairro perdeu metade do território para a criação do Nonoai e ficou com cerca de 1,5 km² de ruas residenciais, prédios e casas antigas.",
+  "secoes": [
+    {
+      "h2": "O que costuma sair das obras no Lourdes",
+      "paragrafos": [
+        "É um bairro de reforma, não de obra nova. Troca de piso, banheiro, cozinha, telhado e muro de casas que já têm algumas décadas. O volume por obra é moderado, então a caçamba de 3 ou 4 m³ costuma bastar.",
+        "Em casa antiga, quebrar reboco e contrapiso gera material pesado. Encha a caçamba de forma nivelada e sem passar da borda: em Santa Maria, entulho acima da borda rende multa para quem contratou."
+      ]
+    },
+    {
+      "h2": "Sangas do Arroio Cancela: entulho longe da água",
+      "paragrafos": [
+        "Parte dos limites do bairro segue sangas que correm para o Arroio Cancela. O plano municipal de resíduos da construção proíbe depositar entulho fora de área licenciada e protege fundos de vale e drenagem natural. Na prática, nunca deixe entulho, mesmo que por pouco tempo, perto de sanga ou bueiro: a chuva leva o material e entope a drenagem da rua.",
+        "Com caçamba, o problema não existe: o entulho sai do terreno direto para a área de destino, com o controle de transporte da empresa."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Qual tamanho de caçamba para reforma de casa no Lourdes?",
+      "r": "Para um ou dois cômodos, a de 3 m³ costuma resolver. Reforma da casa inteira ou telhado pede 4 ou 5 m³. Envie fotos pelo WhatsApp para confirmar."
+    },
+    {
+      "p": "Posso deixar o entulho no pátio até juntar tudo?",
+      "r": "Dentro do seu terreno, sim, mas longe de ralo e de sanga. Na calçada ou na rua o Código de Posturas tolera no máximo 6 horas."
+    }
+  ],
+  "proximos": [
+    "centro",
+    "nossa-senhora-medianeira",
+    "nossa-senhora-das-dores"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Nossa_Senhora_de_Lourdes_(Santa_Maria)"
+  ]
+}

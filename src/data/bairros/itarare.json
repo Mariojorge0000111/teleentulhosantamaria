@@ -1,0 +1,43 @@
+{
+  "slug": "itarare",
+  "nome": "Itararé",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Itararé, Santa Maria",
+  "descricao": "Caçamba de entulho no Itararé, Santa Maria: reforma de casa antiga, telhado e assoalho no bairro da ferrovia. Descarte licenciado. Peça no WhatsApp.",
+  "h1": "Caçamba de entulho no Itararé",
+  "sobre": "O Itararé, no nordeste de Santa Maria, deve o nome à ferrovia Santa Maria–Itararé, aberta em 1894, que ligava a cidade à região de mesmo nome em São Paulo. A palavra vem do tupi e quer dizer pedra escavada. O bairro cresceu com a ferrovia e guarda casas mais antigas, de famílias ligadas aos trilhos.",
+  "secoes": [
+    {
+      "h2": "Reforma de casa antiga",
+      "paragrafos": [
+        "Casa antiga costuma esconder surpresas: reboco grosso, contrapiso de concreto, assoalho de madeira sobre barrotes, forro de madeira. Tudo isso pode ir para a caçamba, mas o volume cresce rápido quando se tira forro e assoalho.",
+        "Antes de quebrar, vale separar o que tem valor: tijolo maciço antigo e madeira de lei em bom estado às vezes são reaproveitados. O que sobrar vai para a caçamba."
+      ]
+    },
+    {
+      "h2": "Ruas, declives e posição da caçamba",
+      "paragrafos": [
+        "O Itararé tem ruas com subida e descida. Em rua inclinada, a caçamba precisa ficar bem apoiada e com o lado maior paralelo ao meio-fio, sem invadir a calçada. Indique no pedido se a frente do imóvel é em declive; o motorista escolhe o ponto mais seguro.",
+        "Pela Avenida Perimetral e pelas ruas que levam ao Centro, o caminhão chega com facilidade."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Forro e assoalho de madeira vão na caçamba?",
+      "r": "Vão, se a empresa aceitar madeira junto. Avise no pedido, porque madeira ocupa muito espaço e pode mudar o tamanho indicado."
+    },
+    {
+      "p": "Minha rua no Itararé é íngreme. Dá para colocar caçamba?",
+      "r": "Na maioria dos casos, sim. O motorista avalia o ponto mais plano e seguro na frente do imóvel. Mande uma foto da rua junto com o pedido."
+    }
+  ],
+  "proximos": [
+    "centro",
+    "presidente-joao-goulart",
+    "nossa-senhora-das-dores"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Itararé_(Santa_Maria)"
+  ]
+}

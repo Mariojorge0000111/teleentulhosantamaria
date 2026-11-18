@@ -1,0 +1,26 @@
+---
+import tamanhos from '../data/imagens.json';
+
+interface Props {
+  nome: string;
+  alt: string;
+  prioridade?: boolean;
+  sizes?: string;
+  class?: string;
+}
+const { nome, alt, prioridade = false, sizes = '(max-width: 900px) 100vw, 760px', class: classe } = Astro.props;
+const [w, h] = (tamanhos as Record<string, number[]>)[nome] ?? [1600, 1066];
+const srcset = `/images/${nome}-800.webp 800w, /images/${nome}.webp ${w}w`;
+---
+<img
+  src={`/images/${nome}-800.webp`}
+  srcset={srcset}
+  sizes={sizes}
+  alt={alt}
+  width={w}
+  height={h}
+  loading={prioridade ? 'eager' : 'lazy'}
+  decoding={prioridade ? 'sync' : 'async'}
+  fetchpriority={prioridade ? 'high' : 'auto'}
+  class={classe}
+/>

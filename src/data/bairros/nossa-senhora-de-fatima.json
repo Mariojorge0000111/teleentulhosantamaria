@@ -1,0 +1,48 @@
+{
+  "slug": "nossa-senhora-de-fatima",
+  "nome": "Nossa Senhora de Fátima",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Nossa Senhora de Fátima",
+  "descricao": "Caçamba de entulho no Nossa Senhora de Fátima, Santa Maria: reforma de apartamento perto da Presidente Vargas e da Borges de Medeiros.",
+  "h1": "Caçamba de entulho no bairro Nossa Senhora de Fátima",
+  "sobre": "O Nossa Senhora de Fátima foi criado em 2006, com áreas do Centro, da Medianeira e do Patronato. Tem menos de 1 km², mas passava de 8,8 mil moradores no Censo de 2010, o que faz dele um dos bairros mais densos de Santa Maria. É cortado pela Avenida Presidente Vargas e, em parte, pela Avenida Borges de Medeiros.",
+  "secoes": [
+    {
+      "h2": "Reforma em prédio",
+      "paragrafos": [
+        "Densidade alta quer dizer muito apartamento. Reforma em prédio tem regras próprias: horário para barulho, uso do elevador de serviço, proteção das áreas comuns. O entulho desce em sacos resistentes e vai direto para a caçamba na rua, sem ficar acumulado na garagem do condomínio.",
+        "Fale com o síndico antes de marcar a caçamba. Alguns prédios pedem aviso prévio de obra e indicam onde o entulho pode passar."
+      ]
+    },
+    {
+      "h2": "Caçamba na Presidente Vargas e nas ruas internas",
+      "paragrafos": [
+        "Na Presidente Vargas e na Borges de Medeiros o fluxo é intenso. Sempre que possível, a caçamba fica na rua lateral, como a Olavo Bilac ou a Duque de Caxias, e o entulho é levado até ela.",
+        "Como o espaço é curto, uma caçamba de 3 m³ com troca rápida costuma funcionar melhor do que uma de 5 m³ parada por vários dias."
+      ],
+      "lista": [
+        "Aviso ao síndico antes da obra",
+        "Entulho em sacos até a caçamba",
+        "Caçamba na rua lateral, longe do fluxo das avenidas"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "O condomínio pode proibir caçamba na frente do prédio?",
+      "r": "A rua é pública, mas o condomínio define as regras internas: por onde o entulho passa e em que horário. Combine com o síndico antes."
+    },
+    {
+      "p": "Qual caçamba para reformar um apartamento no Fátima?",
+      "r": "A de 3 m³ costuma bastar para reforma de apartamento. Mande a lista do que vai ser quebrado para confirmar."
+    }
+  ],
+  "proximos": [
+    "centro",
+    "patronato",
+    "duque-de-caxias"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Nossa_Senhora_de_Fátima_(Santa_Maria)"
+  ]
+}

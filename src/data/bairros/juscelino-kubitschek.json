@@ -1,0 +1,48 @@
+{
+  "slug": "juscelino-kubitschek",
+  "nome": "Juscelino Kubitschek",
+  "prep": "no",
+  "titulo": "Caçamba de Entulho no Juscelino Kubitschek",
+  "descricao": "Caçamba de entulho no Juscelino Kubitschek (Cohab Santa Marta), Santa Maria: reforma, ampliação e limpeza de pátio. Orçamento rápido pelo WhatsApp.",
+  "h1": "Caçamba de entulho no bairro Juscelino Kubitschek",
+  "sobre": "O Juscelino Kubitschek, no oeste de Santa Maria, é muito conhecido pela sua principal unidade residencial, a Cohab Santa Marta. O bairro tem cerca de 2,5 km² e passava de 13 mil moradores no Censo de 2010. Faz divisa com o Distrito Industrial, a Nova Santa Marta, o Patronato e o Pinheiro Machado, e é cortado pela Avenida Walter Jobim.",
+  "secoes": [
+    {
+      "h2": "O entulho típico do JK",
+      "paragrafos": [
+        "Casas de Cohab com algumas décadas pedem reforma de telhado, troca de piso, banheiro e, muitas vezes, ampliação para os fundos. O entulho é misto: telha, madeira de tesoura, cerâmica e alvenaria.",
+        "Madeira e telha ocupam espaço sem pesar muito. Se a reforma inclui o telhado, prefira a caçamba de 4 ou 5 m³, ou combine uma troca no meio da obra."
+      ]
+    },
+    {
+      "h2": "Acesso pela Walter Jobim e BR-287",
+      "paragrafos": [
+        "A Avenida Walter Jobim e a BR-287 dão acesso rápido ao bairro, o que ajuda na entrega e no recolhimento. Nas ruas internas da Cohab, a caçamba fica na pista, em frente ao lote, sem fechar a passagem dos carros.",
+        "Separe à parte, se puder, o madeiramento do telhado: além de facilitar a carga, algumas áreas de destino tratam madeira de forma diferente do entulho de alvenaria."
+      ],
+      "lista": [
+        "Telhado: caçamba de 4 ou 5 m³",
+        "Banheiro ou cozinha: 3 m³",
+        "Madeira separada da alvenaria quando possível"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Vocês atendem a Cohab Santa Marta?",
+      "r": "Sim, a Cohab Santa Marta fica dentro do bairro Juscelino Kubitschek. Peça pelo WhatsApp informando a rua."
+    },
+    {
+      "p": "Telha velha pode ir na caçamba?",
+      "r": "Telha cerâmica e de concreto, sim. Telha de amianto não: é resíduo perigoso e precisa de destinação especial."
+    }
+  ],
+  "proximos": [
+    "nova-santa-marta",
+    "patronato",
+    "pinheiro-machado"
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/Juscelino_Kubitschek_(Santa_Maria)"
+  ]
+}

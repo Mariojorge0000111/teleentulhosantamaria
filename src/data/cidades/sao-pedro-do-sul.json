@@ -1,0 +1,38 @@
+{
+  "slug": "sao-pedro-do-sul",
+  "nome": "São Pedro do Sul",
+  "prep": "em",
+  "titulo": "Caçamba de Entulho em São Pedro do Sul RS",
+  "descricao": "Caçamba de entulho em São Pedro do Sul RS, a oeste de Santa Maria: obra, reforma e limpeza de terreno com descarte licenciado. Consulte o frete.",
+  "h1": "Caçamba de entulho em São Pedro do Sul",
+  "sobre": "São Pedro do Sul fica a oeste de Santa Maria e tem cerca de 874 km², com uma população de pouco mais de 15 mil pessoas. O município guarda uma longa história de ocupação humana, com sítios arqueológicos como o Abrigo da Pedra Grande, e mistura núcleo urbano com uma grande área rural.",
+  "secoes": [
+    {
+      "h2": "Atendimento em São Pedro do Sul",
+      "paragrafos": [
+        "O pedido sai de Santa Maria, de acordo com a agenda da empresa parceira, e pode ter taxa de deslocamento. Para orçar certo, envie o endereço completo, o tipo de entulho e uma estimativa do volume.",
+        "Se a obra tiver bastante entulho, combine logo a quantidade de trocas. Assim a viagem é planejada e a caçamba não fica parada cheia esperando retirada."
+      ]
+    },
+    {
+      "h2": "O que pode e o que não pode",
+      "paragrafos": [
+        "Tijolo, concreto, reboco, telha, cerâmica, pedra e terra vão na caçamba. Lixo doméstico, tinta, solvente, amianto, pneu e eletrônico não vão. Madeira, gesso, metal e poda dependem de combinação.",
+        "Separar o material na própria obra facilita o descarte e pode baratear o serviço."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "p": "Vocês atendem São Pedro do Sul?",
+      "r": "Conforme disponibilidade da empresa parceira, com possível taxa de deslocamento. Confirme pelo WhatsApp antes de agendar a obra."
+    },
+    {
+      "p": "Quanto custa a caçamba fora de Santa Maria?",
+      "r": "O valor depende do tamanho, do material, dos dias e da distância. O orçamento é feito pelo WhatsApp, sem compromisso."
+    }
+  ],
+  "fontes": [
+    "https://pt.wikipedia.org/wiki/São_Pedro_do_Sul_(Rio_Grande_do_Sul)"
+  ]
+}

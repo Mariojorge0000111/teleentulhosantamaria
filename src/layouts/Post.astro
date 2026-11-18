@@ -1,0 +1,78 @@
+---
+import Base from './Base.astro';
+import Img from '../components/Img.astro';
+import Faq from '../components/Faq.astro';
+import Cta from '../components/Cta.astro';
+import Migalhas from '../components/Migalhas.astro';
+import IconeWhats from '../components/IconeWhats.astro';
+import { SITE, linkWhatsapp } from '../config';
+
+const { frontmatter: f } = Astro.props;
+const base = new URL('/', Astro.site).href;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const migalhas = [{ nome: 'Blog', href: '/blog/' }, { nome: f.titulo }];
+const dataBr = new Date(f.data + 'T12:00:00').toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+const schema: object[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: f.titulo,
+    description: f.descricao,
+    datePublished: f.data,
+    dateModified: f.atualizado ?? f.data,
+    inLanguage: 'pt-BR',
+    mainEntityOfPage: url,
+    image: new URL(`/images/${f.imagem}.webp`, Astro.site).href,
+    author: { '@type': 'Organization', name: SITE.nome, url: base },
+    publisher: { '@id': `${base}#organizacao` },
+  },
+];
+if (f.faq?.length) {
+  schema.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: f.faq.map((q: any) => ({ '@type': 'Question', name: q.p, acceptedAnswer: { '@type': 'Answer', text: q.r } })),
+  });
+}
+const mensagem = `Olá! Li o guia "${f.titulo}" no site e quero um orçamento de caçamba em Santa Maria. Bairro: `;
+---
+<Base title={f.tituloSeo ?? f.titulo} description={f.descricao} schema={schema} migalhas={migalhas} ogType="article" mensagem={mensagem} preloadImg={f.imagem}>
+  <header class="pagina-topo">
+    <div class="wrap post">
+      <Migalhas itens={migalhas} />
+      <h1>{f.titulo}</h1>
+      <p class="meta">Publicado em <time datetime={f.data}>{dataBr}</time> · {SITE.nome}</p>
+    </div>
+  </header>
+  <section class="secao">
+    <div class="wrap conteudo">
+      <article class="post">
+        <figure><Img nome={f.imagem} alt={f.imagemAlt} prioridade /></figure>
+        <slot />
+        {f.faq?.length > 0 && (
+          <>
+            <h2>Perguntas rápidas</h2>
+            <Faq itens={f.faq} />
+          </>
+        )}
+      </article>
+      <aside class="lateral">
+        <div class="box-cta">
+          <p class="h">Vai precisar de caçamba?</p>
+          <p>Mande o endereço e o tipo de entulho. Orçamento sem compromisso.</p>
+          <a class="btn btn-whats" href={linkWhatsapp(mensagem)} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Chamar no WhatsApp</a>
+        </div>
+        <nav class="box-links" aria-label="Serviços">
+          <p class="h">Serviços</p>
+          <ul>
+            <li><a href="/servicos/aluguel-de-cacamba/">Aluguel de caçamba</a></li>
+            <li><a href="/servicos/recolhimento-de-entulho/">Recolhimento de entulho</a></li>
+            <li><a href="/servicos/cacamba-para-obra-e-reforma/">Caçamba para obra e reforma</a></li>
+            <li><a href="/servicos/tamanhos-de-cacamba/">Tamanhos de caçamba</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </section>
+  <Cta mensagem={mensagem} />
+</Base>
