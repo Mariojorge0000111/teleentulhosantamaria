@@ -27,10 +27,10 @@ const schema = {
   <section class="secao">
     <div class="wrap grade grade-3">
       {CIDADES.map((c) => (
-        <article class="card">
-          <h2 style="font-size:1.25rem"><a href={`/cidades/${c.slug}/`} style="color:inherit;text-decoration:none">{c.nome}</a></h2>
+        <article class="card card-link">
+          <h2 style="font-size:1.2rem"><a href={`/cidades/${c.slug}/`}>{c.nome}</a></h2>
           <p>{c.descricao}</p>
-          <a class="mais" href={`/cidades/${c.slug}/`}>Caçamba {c.prep} {c.nome}</a>
+          <span class="link-seta">Caçamba {c.prep} {c.nome}</span>
         </article>
       ))}
     </div>

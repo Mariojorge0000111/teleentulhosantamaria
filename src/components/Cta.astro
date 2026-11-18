@@ -13,12 +13,14 @@ const {
   mensagem,
 } = Astro.props;
 ---
-<section class="secao cta-faixa">
-  <div class="wrap cta-grade">
-    <div>
-      <h2>{titulo}</h2>
-      <p>{texto}</p>
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-caixa">
+      <div>
+        <h2>{titulo}</h2>
+        <p>{texto}</p>
+      </div>
+      <a class="btn btn-whats" href={linkWhatsapp(mensagem)} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Pedir orçamento</a>
     </div>
-    <a class="btn" href={linkWhatsapp(mensagem)} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Pedir orçamento no WhatsApp</a>
   </div>
 </section>

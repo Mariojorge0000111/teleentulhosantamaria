@@ -17,7 +17,7 @@ Site de aluguel (rank and rent) do Mário Jorge. Ranqueia no Google para tele en
 - `src/data/faq.ts`: FAQ geral (página `/perguntas-frequentes/`; as marcadas `home: true` vão para a home).
 - `src/pages/blog/*.md`: artigos, layout `Post.astro`, frontmatter `titulo`, `tituloSeo`, `descricao`, `data`, `imagem`, `imagemAlt`, `palavraChave`, `faq`.
 - Imagens: `public/images/<nome>.webp` (1600) e `<nome>-800.webp`, tamanhos em `src/data/imagens.json`. Fotos do Pexels; IDs usados em `src/data/pexels-usados.json` (não repetir, nem as dos sites 1 e 2). Hero é ilustração SVG própria (`CacambaArte.astro`).
-- Cores: laranja #e8590c / #b8460a, grafite #1f2933, areia #f7f3ec. Fontes Archivo + Source Sans 3.
+- Design minimalista (redesenho 18/11/2026): fundo branco + superfície #f6f5f3, texto #111827, cinza #5b6370, laranja #ea580c (texto #c2410c), verde WhatsApp #15803d. Fonte única Manrope variável. No celular: menu em gaveta, barra fixa de WhatsApp no rodapé, cards em trilho com rolagem lateral. Imagens com versões 480/800/1600.
 
 ## Regras de conteúdo
 - Título 30–60 caracteres, descrição 130–155. Um H1 por página.
@@ -25,7 +25,7 @@ Site de aluguel (rank and rent) do Mário Jorge. Ranqueia no Google para tele en
 - Regras locais citadas (conferidas em 18/11/2026 no site da Câmara): Decreto Executivo nº 146/2009 (caçamba máx. 5 m³, nada acima da borda e sem lixo doméstico = multa ao contratante, CTR, área licenciada pela SMPA, pequeno gerador até 3,5 m³) e LC nº 92/2012 (art. 61: material na via até 6 h; art. 62: faixas reflexivas; art. 63: passeio limpo).
 - Cidades vizinhas: sempre "conforme agenda da empresa parceira, com possível taxa de deslocamento".
 - Sem travessão longo e sem clichês de IA. Texto de cada bairro precisa ser único.
-- Lighthouse mobile em 18/11/2026: 100/100/100/100 na home, serviço e bairro.
+- Lighthouse mobile depois do redesenho (18/11/2026): 100 em acessibilidade, boas práticas e SEO; desempenho 99–100.
 
 ## Rotinas
 - Plano de 8 semanas: 1 backlink por semana pela 8links (nunca comprar nem recarregar créditos, nunca digitar senhas) e 1 artigo novo a cada 2 semanas (temas no plano enviado ao Mário).

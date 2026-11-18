@@ -27,12 +27,12 @@ const schema = {
   <section class="secao">
     <div class="wrap grade grade-2">
       {SERVICOS.map((s) => (
-        <article class="card card-img">
+        <article class="card card-img card-link">
           <Img nome={s.imagem} alt={s.imagemAlt} sizes="(max-width: 620px) 100vw, 560px" />
           <div class="card-corpo">
-            <h2 style="font-size:1.4rem"><a href={`/servicos/${s.slug}/`} style="color:inherit;text-decoration:none">{s.nome}</a></h2>
+            <h2 style="font-size:1.35rem"><a href={`/servicos/${s.slug}/`}>{s.nome}</a></h2>
             <p>{s.curto}</p>
-            <a class="mais" href={`/servicos/${s.slug}/`}>Ver detalhes</a>
+            <span class="link-seta">Ver detalhes</span>
           </div>
         </article>
       ))}

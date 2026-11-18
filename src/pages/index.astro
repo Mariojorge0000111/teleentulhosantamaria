@@ -66,52 +66,59 @@ const wa = linkWhatsapp();
   <section class="hero">
     <div class="wrap hero-grade">
       <div>
-        <p class="sobretitulo" style="color:#ffb68a">Santa Maria · RS</p>
-        <h1>Tele entulho em Santa Maria: caçamba de entulho na porta da sua obra</h1>
-        <p class="lead">Aluguel de caçamba de entulho em Santa Maria para reforma, construção e limpeza de terreno. Você manda o endereço pelo WhatsApp, recebe tamanho, valor e prazo, e o entulho sai da obra para uma área licenciada.</p>
+        <p class="sobretitulo">Tele entulho · Santa Maria, RS</p>
+        <h1>Caçamba de entulho em Santa Maria, <em>sem complicação</em></h1>
+        <p class="lead">Tele entulho para reforma, construção e limpeza de terreno. Mande o endereço pelo WhatsApp, receba tamanho, valor e prazo, e o entulho sai da obra para uma área licenciada.</p>
         <div class="botoes">
           <a class="btn btn-whats" href={wa} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Pedir caçamba no WhatsApp</a>
           <a class="btn btn-claro" href="/servicos/tamanhos-de-cacamba/">Ver tamanhos</a>
         </div>
         <ul class="selos">
-          <li>Caçambas de 3 a 5 m³</li>
-          <li>Destino licenciado com CTR</li>
+          <li>3 a 5 m³</li>
+          <li>Destino licenciado</li>
           <li>Orçamento sem compromisso</li>
         </ul>
       </div>
-      <CacambaArte class="hero-arte" />
+      <div class="hero-arte"><CacambaArte /></div>
     </div>
   </section>
 
   <section class="secao">
     <div class="wrap">
-      <p class="sobretitulo">Como funciona</p>
-      <h2>Do pedido à retirada em quatro passos</h2>
-      <div class="grade grade-4" style="margin-top:1.5rem">
-        {passos.map((p, i) => (
-          <div class="card">
-            <div class="numero">0{i + 1}</div>
+      <div class="cabeca">
+        <div>
+          <p class="sobretitulo">Como funciona</p>
+          <h2>Do pedido à retirada</h2>
+        </div>
+      </div>
+      <ol class="passos">
+        {passos.map((p) => (
+          <li>
             <h3>{p.t}</h3>
             <p>{p.d}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   </section>
 
   <section class="secao secao-areia">
     <div class="wrap">
-      <p class="sobretitulo">Serviços</p>
-      <h2>Caçamba de entulho em Santa Maria para cada tipo de obra</h2>
-      <p class="estreito">O tele entulho resolve o que sobra da obra sem você precisar alugar caminhão, contratar carreto ou procurar onde descartar. A caçamba fica no local, você enche no seu ritmo e a retirada é agendada pelo WhatsApp.</p>
-      <div class="grade grade-4" style="margin-top:1.5rem">
+      <div class="cabeca">
+        <div>
+          <p class="sobretitulo">Serviços</p>
+          <h2>Tele entulho para cada tipo de obra</h2>
+          <p>Sem alugar caminhão nem procurar onde descartar. A caçamba fica na obra, você enche no seu ritmo e agenda a retirada pelo WhatsApp.</p>
+        </div>
+        <a class="link-seta" href="/servicos/">Todos os serviços</a>
+      </div>
+      <div class="grade grade-4 trilho">
         {SERVICOS.map((s) => (
-          <article class="card card-img">
-            <Img nome={s.imagem} alt={s.imagemAlt} sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 280px" />
+          <article class="card card-img card-link">
+            <Img nome={s.imagem} alt={s.imagemAlt} sizes="(max-width: 600px) 82vw, (max-width: 960px) 50vw, 270px" />
             <div class="card-corpo">
-              <h3><a href={`/servicos/${s.slug}/`} style="color:inherit;text-decoration:none">{s.nome}</a></h3>
+              <h3><a href={`/servicos/${s.slug}/`}>{s.nome}</a></h3>
               <p>{s.curto}</p>
-              <a class="mais" href={`/servicos/${s.slug}/`}>Saiba mais</a>
             </div>
           </article>
         ))}
@@ -121,97 +128,134 @@ const wa = linkWhatsapp();
 
   <section class="secao">
     <div class="wrap">
-      <p class="sobretitulo">Tamanhos</p>
-      <h2>Qual caçamba pedir: 3, 4 ou 5 m³</h2>
-      <p class="estreito">Um carrinho de mão de obra leva perto de 60 litros. Conte quantos carrinhos de entulho você tem e compare. Em Santa Maria, a caçamba de entulho pode ter no máximo 5 m³.</p>
-      <div class="grade grade-3" style="margin-top:1.5rem">
+      <div class="cabeca">
+        <div>
+          <p class="sobretitulo">Tamanhos</p>
+          <h2>Qual caçamba pedir</h2>
+          <p>Um carrinho de mão de obra leva uns 60 litros. Conte os carrinhos de entulho e compare. Em Santa Maria, o máximo permitido é 5 m³.</p>
+        </div>
+        <a class="link-seta" href="/servicos/tamanhos-de-cacamba/">Guia de tamanhos</a>
+      </div>
+      <div class="tamanhos">
         {tamanhos.map((t) => (
-          <div class="card tamanho">
-            <div class="m3">{t.m} <small>m³</small></div>
-            <svg width="150" height="70" viewBox="0 0 150 70" aria-hidden="true">
-              <path d={`M10 ${70 - t.h} H140 L128 66 H22 Z`} fill="#e8590c" />
-              <rect x="22" y="64" width="106" height="6" rx="2" fill="#323f4b" />
+          <div class={`tamanho${t.m === 4 ? ' tamanho-destaque' : ''}`}>
+            <div class="m3">{t.m}<small>m³</small></div>
+            <svg width="120" height="56" viewBox="0 0 150 70" aria-hidden="true">
+              <path d={`M10 ${70 - t.h} H140 L128 64 H22 Z`} fill="#ea580c" />
+              <rect x="22" y="64" width="106" height="6" rx="3" fill={t.m === 4 ? '#ffffff' : '#111827'} />
             </svg>
-            <p><strong>Cerca de {t.carrinhos} carrinhos de mão.</strong><br />{t.uso}.</p>
-            <a class="mais" href={linkWhatsapp(`Olá! Vim pelo site e quero orçamento de caçamba de ${t.m} m³ em Santa Maria. Bairro: `)} target="_blank" rel="noopener" data-evento="whatsapp">Orçar caçamba de {t.m} m³</a>
+            <strong>Cerca de {t.carrinhos} carrinhos de mão</strong>
+            <p class="uso">{t.uso}.</p>
+            <a class="link-seta" href={linkWhatsapp(`Olá! Vim pelo site e quero orçamento de caçamba de ${t.m} m³ em Santa Maria. Bairro: `)} target="_blank" rel="noopener" data-evento="whatsapp">Orçar {t.m} m³</a>
           </div>
         ))}
       </div>
-      <p style="margin-top:1.2rem"><a href="/servicos/tamanhos-de-cacamba/">Entenda a diferença entre volume e peso na escolha da caçamba</a></p>
     </div>
   </section>
 
   <section class="secao secao-areia">
-    <div class="wrap grade grade-2" style="align-items:center;gap:2.5rem">
-      <div>
-        <p class="sobretitulo">Antes de encher</p>
-        <h2>O que pode e o que não pode na caçamba</h2>
-        <p>Entulho é resíduo de obra. A caçamba recebe material de construção e demolição; o resto tem destino próprio.</p>
-        <ul class="lista-check">
-          <li><strong>Pode:</strong> tijolo, bloco, concreto, reboco, telha cerâmica, piso, azulejo, louça, pedra, areia e terra.</li>
-          <li><strong>Consulte:</strong> madeira, gesso, metal, vidro, poda e móveis.</li>
-          <li><strong>Não pode:</strong> lixo doméstico, tinta, solvente, óleo, amianto, pneu, eletrônico, pilha e lâmpada.</li>
-        </ul>
-        <p><a href="/blog/o-que-pode-e-o-que-nao-pode-na-cacamba-de-entulho/">Lista completa do que pode e do que não pode</a></p>
+    <div class="wrap">
+      <div class="cabeca">
+        <div>
+          <p class="sobretitulo">Antes de encher</p>
+          <h2>O que vai na caçamba</h2>
+          <p>Caçamba de entulho recebe resíduo de obra. O resto tem destino próprio.</p>
+        </div>
+        <a class="link-seta" href="/blog/o-que-pode-e-o-que-nao-pode-na-cacamba-de-entulho/">Lista completa</a>
       </div>
-      <Img nome="entulho-de-tijolos" alt="Monte de tijolos e blocos de concreto quebrados, entulho típico de obra" sizes="(max-width: 620px) 100vw, 540px" />
+      <div class="tres-colunas">
+        <div class="coluna" style="--c:#15803d">
+          <h3>Pode</h3>
+          <p>Tijolo, bloco, concreto, reboco, telha cerâmica, piso, azulejo, louça, pedra, areia e terra.</p>
+        </div>
+        <div class="coluna" style="--c:#ca8a04">
+          <h3>Consulte antes</h3>
+          <p>Madeira, gesso, metal, vidro, poda de árvore e móveis velhos.</p>
+        </div>
+        <div class="coluna" style="--c:#dc2626">
+          <h3>Não pode</h3>
+          <p>Lixo doméstico, tinta, solvente, óleo, amianto, pneu, eletrônico, pilha e lâmpada.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="secao">
-    <div class="wrap estreito">
-      <p class="sobretitulo">Regras da prefeitura</p>
-      <h2>O que Santa Maria exige de quem usa caçamba</h2>
-      <p>Santa Maria tem regras próprias para caçambas e entulho, no Plano de Gerenciamento de Resíduos da Construção Civil (Decreto Executivo nº 146/2009) e no Código de Posturas (Lei Complementar nº 92/2012). As principais:</p>
-      <ul class="lista-check">
-        <li>Caçamba de no máximo 5 m³, sem entulho acima da borda. O excesso gera multa para quem contratou.</li>
-        <li>Lixo doméstico misturado ao entulho é proibido, com multa para o contratante.</li>
-        <li>A separação do material é responsabilidade de quem gera o entulho.</li>
-        <li>A caçamba deve ter nome da empresa, telefone, licença de operação, faixas reflexivas e a inscrição "proibido lixo doméstico".</li>
-        <li>O transporte sai com Controle de Transporte de Resíduos (CTR) e vai só para área licenciada.</li>
-        <li>Material de construção solto na via: no máximo 6 horas.</li>
-      </ul>
-      <p class="fonte">Fontes: <a href={FONTES.decreto146} target="_blank" rel="noopener">Decreto Executivo nº 146/2009</a> e <a href={FONTES.codigoPosturas} target="_blank" rel="noopener">Lei Complementar nº 92/2012</a>, Câmara de Vereadores de Santa Maria. <a href="/blog/regras-para-cacamba-na-rua-em-santa-maria/">Leia o resumo das regras</a>.</p>
+    <div class="wrap duo">
+      <div>
+        <p class="sobretitulo">Regras da prefeitura</p>
+        <h2>O que Santa Maria exige de quem usa caçamba</h2>
+        <ul class="lista-check">
+          <li>Caçamba de no máximo 5 m³, sem entulho acima da borda. O excesso gera multa para quem contratou.</li>
+          <li>Lixo doméstico misturado ao entulho é proibido, com multa para o contratante.</li>
+          <li>A caçamba deve ter identificação da empresa, faixas reflexivas e a inscrição "proibido lixo doméstico".</li>
+          <li>O transporte sai com Controle de Transporte de Resíduos (CTR) para área licenciada.</li>
+          <li>Material de construção solto na rua: no máximo 6 horas.</li>
+        </ul>
+        <p class="fonte">Fontes: <a href={FONTES.decreto146} target="_blank" rel="noopener">Decreto Executivo nº 146/2009</a> e <a href={FONTES.codigoPosturas} target="_blank" rel="noopener">Lei Complementar nº 92/2012</a>, Câmara de Vereadores de Santa Maria.</p>
+        <a class="link-seta" href="/blog/regras-para-cacamba-na-rua-em-santa-maria/">Resumo das regras</a>
+      </div>
+      <Img nome="entulho-de-tijolos" alt="Monte de tijolos e blocos de concreto quebrados, entulho típico de obra" sizes="(max-width: 860px) 100vw, 520px" />
     </div>
   </section>
 
-  <section class="secao secao-grafite">
+  <section class="secao secao-areia">
+    <div class="wrap estreito">
+      <p class="sobretitulo">Tele entulho em Santa Maria</p>
+      <h2>Tele entulho, caçamba estacionária, contêiner: é tudo a mesma coisa</h2>
+      <p>No Rio Grande do Sul, quem precisa tirar entulho de obra costuma procurar por <strong>tele entulho</strong>. Em outros lugares o mesmo serviço aparece como caçamba de entulho, caçamba estacionária, contêiner de entulho, disk entulho ou tele caçamba. Em todos os casos é a mesma solução: uma caixa metálica de 3 a 5 m³ que fica na frente da obra e depois é recolhida por um caminhão poliguindaste.</p>
+      <p>O que muda de uma empresa para outra é o atendimento, o prazo e o cuidado com o destino do entulho. Em Santa Maria, o transporte precisa sair com o Controle de Transporte de Resíduos e ir para uma área licenciada pela Secretaria de Proteção Ambiental. Pergunte por isso no orçamento: é a garantia de que o entulho da sua obra não vai acabar num terreno baldio.</p>
+      <p>Para pedir, mande pelo WhatsApp o endereço da obra, o bairro e o que vai ser descartado. Se não souber o tamanho, envie fotos do entulho e receba a indicação junto com o valor.</p>
+    </div>
+  </section>
+
+  <section class="secao">
     <div class="wrap">
-      <h2>Bairros de Santa Maria com página própria</h2>
-      <p>Peça tele entulho em qualquer bairro da cidade. Estes têm dicas específicas de acesso e de obra:</p>
-      <ul class="chips" style="margin:1.2rem 0 2rem">
+      <div class="cabeca">
+        <div>
+          <p class="sobretitulo">Onde atendemos</p>
+          <h2>Bairros de Santa Maria</h2>
+          <p>Peça tele entulho em qualquer bairro. Estes têm página com dicas de acesso e de obra:</p>
+        </div>
+        <a class="link-seta" href="/bairros/">Ver todos</a>
+      </div>
+      <ul class="chips">
         {BAIRROS.map((b) => <li><a href={`/bairros/${b.slug}/`}>{b.nome}</a></li>)}
       </ul>
-      <h3>Cidades vizinhas</h3>
-      <p>Atendimento conforme a agenda da empresa parceira, com possível taxa de deslocamento:</p>
-      <ul class="chips" style="margin-top:1rem">
+      <h3 style="margin-top:2.5rem">Cidades vizinhas</h3>
+      <p class="fonte" style="margin-bottom:1rem">Conforme a agenda da empresa parceira, com possível taxa de deslocamento.</p>
+      <ul class="chips">
         {CIDADES.map((c) => <li><a href={`/cidades/${c.slug}/`}>{c.nome}</a></li>)}
       </ul>
     </div>
   </section>
 
-  <section class="secao">
+  <section class="secao secao-areia">
     <div class="wrap estreito">
       <p class="sobretitulo">Dúvidas</p>
-      <h2>Perguntas frequentes sobre caçamba de entulho</h2>
+      <h2>Perguntas frequentes</h2>
       <Faq itens={FAQ_HOME} />
-      <p style="margin-top:1rem"><a href="/perguntas-frequentes/">Ver todas as perguntas</a></p>
+      <p style="margin-top:1.5rem"><a class="link-seta" href="/perguntas-frequentes/">Todas as perguntas</a></p>
     </div>
   </section>
 
   {posts.length > 0 && (
-    <section class="secao secao-areia">
+    <section class="secao">
       <div class="wrap">
-        <p class="sobretitulo">Blog</p>
-        <h2>Guias para quem vai pedir caçamba</h2>
-        <div class="grade grade-3" style="margin-top:1.5rem">
+        <div class="cabeca">
+          <div>
+            <p class="sobretitulo">Blog</p>
+            <h2>Guias antes de pedir</h2>
+          </div>
+          <a class="link-seta" href="/blog/">Ver o blog</a>
+        </div>
+        <div class="grade grade-3 trilho">
           {posts.map((p) => (
-            <article class="card card-img">
-              <Img nome={p.imagem} alt={p.imagemAlt} sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 370px" />
+            <article class="card card-img card-link">
+              <Img nome={p.imagem} alt={p.imagemAlt} sizes="(max-width: 600px) 82vw, (max-width: 960px) 50vw, 360px" />
               <div class="card-corpo">
-                <h3><a href={p.url} style="color:inherit;text-decoration:none">{p.titulo}</a></h3>
+                <h3><a href={p.url}>{p.titulo}</a></h3>
                 <p>{p.descricao}</p>
-                <a class="mais" href={p.url}>Ler guia</a>
               </div>
             </article>
           ))}

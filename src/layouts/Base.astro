@@ -90,24 +90,23 @@ const bairrosRodape = [
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content={SITE.nome} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#1f2933" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="geo.region" content="BR-RS" />
     <meta name="geo.placename" content="Santa Maria" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="preload" href="/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     {preloadImg && <link rel="preload" as="image" href={`/images/${preloadImg}-800.webp`} imagesrcset={`/images/${preloadImg}-800.webp 800w, /images/${preloadImg}.webp 1600w`} imagesizes="(max-width: 900px) 100vw, 760px" fetchpriority="high" />}
     <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
     {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
   </head>
   <body>
-    <a class="visualmente-oculto" href="#conteudo">Pular para o conteúdo</a>
+    <a class="visualmente-oculto pular" href="#conteudo">Pular para o conteúdo</a>
     <header class="topo">
       <div class="wrap topo-inner">
         <a href="/" class="marca" aria-label={`${SITE.nome}, página inicial`}>
           <span class="marca-sinal" aria-hidden="true">
-            <svg width="20" height="16" viewBox="0 0 40 30"><path d="M2 4h36l-5 22H7z" fill="#fff"/><path d="M8 4l4-3h6l3 3M22 4l3-2h7l3 2" fill="none" stroke="#1f2933" stroke-width="2.5"/></svg>
+            <svg width="18" height="14" viewBox="0 0 40 30"><path d="M2 5h36l-5 22H7z" fill="#fff"/></svg>
           </span>
           <span>{SITE.nome}</span>
         </a>
@@ -116,15 +115,21 @@ const bairrosRodape = [
             {menu.map((m) => <li><a href={m.href} aria-current={atual.startsWith(m.href) && !(m.href === '/servicos/' && atual.startsWith('/servicos/tamanhos')) ? 'page' : undefined}>{m.nome}</a></li>)}
           </ul>
           <details class="menu-mobile">
-            <summary>Menu</summary>
-            <ul>
-              <li><a href="/">Início</a></li>
-              {menu.map((m) => <li><a href={m.href}>{m.nome}</a></li>)}
-              <li><a href="/cidades/">Cidades vizinhas</a></li>
-            </ul>
+            <summary aria-label="Abrir menu">
+              <svg class="ico-abrir" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 14h14" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <svg class="ico-fechar" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </summary>
+            <div class="gaveta">
+              <ul>
+                <li><a href="/">Início</a></li>
+                {menu.map((m) => <li><a href={m.href}>{m.nome}</a></li>)}
+                <li><a href="/cidades/">Cidades vizinhas</a></li>
+              </ul>
+              <a class="btn btn-whats" href={wa} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Pedir caçamba no WhatsApp</a>
+            </div>
           </details>
         </nav>
-        <a class="btn btn-sm btn-whats" href={wa} target="_blank" rel="noopener" data-evento="whatsapp">Pedir caçamba</a>
+        <a class="btn btn-sm btn-whats btn-topo" href={wa} target="_blank" rel="noopener" data-evento="whatsapp">Pedir caçamba</a>
       </div>
     </header>
 
@@ -138,7 +143,7 @@ const bairrosRodape = [
           <div>
             <a href="/" class="marca">
               <span class="marca-sinal" aria-hidden="true">
-                <svg width="20" height="16" viewBox="0 0 40 30"><path d="M2 4h36l-5 22H7z" fill="#fff"/></svg>
+                <svg width="18" height="14" viewBox="0 0 40 30"><path d="M2 5h36l-5 22H7z" fill="#fff"/></svg>
               </span>
               <span>{SITE.nome}</span>
             </a>
@@ -180,8 +185,8 @@ const bairrosRodape = [
     </footer>
 
     <a class="whats" href={wa} target="_blank" rel="noopener" aria-label="Pedir caçamba pelo WhatsApp" data-evento="whatsapp">
-      <span class="whats-icone" aria-hidden="true"><IconeWhats /></span>
-      <span class="whats-texto">Pedir caçamba</span>
+      <IconeWhats />
+      <span>Pedir caçamba pelo WhatsApp</span>
     </a>
   </body>
 </html>

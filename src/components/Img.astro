@@ -10,7 +10,7 @@ interface Props {
 }
 const { nome, alt, prioridade = false, sizes = '(max-width: 900px) 100vw, 760px', class: classe } = Astro.props;
 const [w, h] = (tamanhos as Record<string, number[]>)[nome] ?? [1600, 1066];
-const srcset = `/images/${nome}-800.webp 800w, /images/${nome}.webp ${w}w`;
+const srcset = `/images/${nome}-480.webp 480w, /images/${nome}-800.webp 800w, /images/${nome}.webp ${w}w`;
 ---
 <img
   src={`/images/${nome}-800.webp`}

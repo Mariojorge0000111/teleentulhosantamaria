@@ -1,39 +1,21 @@
 ---
 // Ilustração própria de uma caçamba estacionária (formato trapézio usado no Brasil)
 interface Props { class?: string; titulo?: string }
-const { class: classe, titulo = 'Ilustração de uma caçamba de entulho laranja cheia de tijolos e telhas' } = Astro.props;
+const { class: classe, titulo = 'Ilustração de uma caçamba de entulho laranja com tijolos' } = Astro.props;
 ---
-<svg class={classe} viewBox="0 0 440 300" role="img" aria-label={titulo} xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="220" cy="268" rx="190" ry="14" fill="#000" opacity=".25"/>
-  <!-- entulho -->
-  <g>
-    <rect x="96" y="70" width="44" height="22" rx="2" fill="#b65a3a" transform="rotate(-12 118 81)"/>
-    <rect x="140" y="58" width="50" height="24" rx="2" fill="#c96a45" transform="rotate(8 165 70)"/>
-    <rect x="198" y="64" width="38" height="20" rx="2" fill="#9aa5b1" transform="rotate(-6 217 74)"/>
-    <rect x="240" y="54" width="52" height="24" rx="2" fill="#b65a3a" transform="rotate(14 266 66)"/>
-    <rect x="290" y="72" width="46" height="20" rx="2" fill="#cbd2d9" transform="rotate(-10 313 82)"/>
-    <path d="M170 86 l40 -30 l30 34 z" fill="#7b8794"/>
-    <rect x="120" y="88" width="210" height="16" fill="#8d6e5a"/>
+<svg class={classe} viewBox="0 0 400 300" role="img" aria-label={titulo} xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="200" cy="262" rx="160" ry="10" fill="#111827" opacity=".08"/>
+  <rect x="112" y="78" width="54" height="26" rx="4" fill="#d6d3d1" transform="rotate(-10 139 91)"/>
+  <rect x="170" y="66" width="60" height="28" rx="4" fill="#111827" transform="rotate(6 200 80)"/>
+  <rect x="236" y="74" width="50" height="26" rx="4" fill="#a8a29e" transform="rotate(12 261 87)"/>
+  <path d="M60 104 H340 L310 244 H90 Z" fill="#ea580c"/>
+  <path d="M60 104 H340 L336 122 H64 Z" fill="#c2410c"/>
+  <g stroke="#c2410c" stroke-width="5" stroke-linecap="round" opacity=".7">
+    <line x1="140" y1="134" x2="147" y2="230"/>
+    <line x1="200" y1="134" x2="200" y2="230"/>
+    <line x1="260" y1="134" x2="253" y2="230"/>
   </g>
-  <!-- corpo da caçamba -->
-  <path d="M70 96 H370 L340 246 H100 Z" fill="#e8590c"/>
-  <path d="M70 96 H370 L366 116 H74 Z" fill="#b8460a"/>
-  <!-- nervuras -->
-  <g stroke="#b8460a" stroke-width="6" stroke-linecap="round">
-    <line x1="140" y1="122" x2="148" y2="240"/>
-    <line x1="220" y1="122" x2="220" y2="240"/>
-    <line x1="300" y1="122" x2="292" y2="240"/>
-  </g>
-  <!-- faixas reflexivas -->
-  <g>
-    <rect x="86" y="200" width="44" height="12" fill="#fff"/>
-    <rect x="86" y="200" width="22" height="12" fill="#e12d39"/>
-    <rect x="310" y="200" width="44" height="12" fill="#fff"/>
-    <rect x="332" y="200" width="22" height="12" fill="#e12d39"/>
-  </g>
-  <!-- olhais -->
-  <circle cx="84" cy="120" r="9" fill="none" stroke="#1f2933" stroke-width="6"/>
-  <circle cx="356" cy="120" r="9" fill="none" stroke="#1f2933" stroke-width="6"/>
-  <!-- base -->
-  <rect x="96" y="244" width="248" height="14" rx="3" fill="#323f4b"/>
+  <rect x="84" y="206" width="36" height="9" rx="2" fill="#fff"/>
+  <rect x="280" y="206" width="36" height="9" rx="2" fill="#fff"/>
+  <rect x="88" y="244" width="224" height="10" rx="5" fill="#111827"/>
 </svg>

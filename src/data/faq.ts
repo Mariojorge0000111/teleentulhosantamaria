@@ -69,7 +69,7 @@ export const FAQ: Grupo[] = [
         home: true,
       },
       {
-        p: 'Quanto custa uma caçamba de entulho em Santa Maria?',
+        p: 'Quanto custa o tele entulho em Santa Maria?',
         r: 'Não há preço tabelado. O valor depende do tamanho, do tipo de entulho, dos dias de permanência e da distância até o bairro. O orçamento é feito pelo WhatsApp, sem compromisso, e você sabe o valor antes de fechar.',
         home: true,
       },
