@@ -6,11 +6,17 @@ import Cta from '../components/Cta.astro';
 import Migalhas from '../components/Migalhas.astro';
 import IconeWhats from '../components/IconeWhats.astro';
 import { SITE, linkWhatsapp } from '../config';
+import { SILOS, siloPorSlug, todosPosts } from '../data/silos';
 
 const { frontmatter: f } = Astro.props;
 const base = new URL('/', Astro.site).href;
 const url = new URL(Astro.url.pathname, Astro.site).href;
-const migalhas = [{ nome: 'Blog', href: '/blog/' }, { nome: f.titulo }];
+const silo = siloPorSlug(f.silo);
+const migalhas = silo
+  ? [{ nome: 'Blog', href: '/blog/' }, { nome: silo.nome, href: `/blog/categoria/${silo.slug}/` }, { nome: f.titulo }]
+  : [{ nome: 'Blog', href: '/blog/' }, { nome: f.titulo }];
+const urlAtual = Astro.url.pathname;
+const irmaos = silo ? todosPosts().filter((p) => p.silo === silo.slug && p.url.replace(/\/?$/, '/') !== urlAtual) : [];
 const dataBr = new Date(f.data + 'T12:00:00').toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
 const schema: object[] = [
   {
@@ -22,6 +28,8 @@ const schema: object[] = [
     dateModified: f.atualizado ?? f.data,
     inLanguage: 'pt-BR',
     mainEntityOfPage: url,
+    ...(silo ? { articleSection: silo.nome } : {}),
+    ...(f.palavraChave ? { keywords: f.palavraChave } : {}),
     image: new URL(`/images/${f.imagem}.webp`, Astro.site).href,
     author: { '@type': 'Organization', name: SITE.nome, url: base },
     publisher: { '@id': `${base}#organizacao` },
@@ -55,6 +63,16 @@ const mensagem = `Olá! Li o guia "${f.titulo}" no site e quero um orçamento de
             <Faq itens={f.faq} />
           </>
         )}
+        {silo && (
+          <nav class="relacionados" aria-label={`Mais sobre ${silo.nome.toLowerCase()}`}>
+            <p class="sobretitulo">{silo.nome}</p>
+            <h2>Continue lendo</h2>
+            <ul>
+              {silo.pilar.href !== urlAtual && <li class="pilar"><a href={silo.pilar.href}>{silo.pilar.nome}</a><span>Guia principal do tema</span></li>}
+              {irmaos.map((p) => <li><a href={p.url}>{p.titulo}</a></li>)}
+            </ul>
+          </nav>
+        )}
       </article>
       <aside class="lateral">
         <div class="box-cta">
@@ -62,6 +80,10 @@ const mensagem = `Olá! Li o guia "${f.titulo}" no site e quero um orçamento de
           <p>Mande o endereço e o tipo de entulho. Orçamento sem compromisso.</p>
           <a class="btn btn-whats" href={linkWhatsapp(mensagem)} target="_blank" rel="noopener" data-evento="whatsapp"><IconeWhats />Chamar no WhatsApp</a>
         </div>
+        <nav class="box-links" aria-label="Categorias do blog">
+          <p class="h">Categorias</p>
+          <ul>{SILOS.map((x) => <li><a href={`/blog/categoria/${x.slug}/`}>{x.nome}</a></li>)}</ul>
+        </nav>
         <nav class="box-links" aria-label="Serviços">
           <p class="h">Serviços</p>
           <ul>

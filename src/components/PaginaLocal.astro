@@ -4,6 +4,7 @@ import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import Migalhas from './Migalhas.astro';
 import IconeWhats from './IconeWhats.astro';
+import MapaAtendimento from './MapaAtendimento.astro';
 import { linkWhatsapp, FONTES } from '../config';
 import { SERVICOS } from '../data/servicos';
 import { BAIRROS, CIDADES, type Local } from '../data/locais';
@@ -114,5 +115,10 @@ const rotulos: Record<string, string> = {
       </aside>
     </div>
   </section>
+  <MapaAtendimento
+    local={ehBairro ? `${l.nome}, Santa Maria, RS` : `${l.nome}, RS`}
+    titulo={ehBairro ? `${l.nome} no mapa de Santa Maria` : `${l.nome} no mapa`}
+    texto={ehBairro ? `O bairro ${l.nome} faz parte da área de atendimento em Santa Maria. A caçamba vai até o endereço da sua obra.` : `${l.nome} é atendida a partir de Santa Maria, conforme a agenda da empresa parceira e com possível taxa de deslocamento.`}
+  />
   <Cta titulo={`Precisa de caçamba ${onde}?`} mensagem={mensagem} />
 </Base>

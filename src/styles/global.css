@@ -302,3 +302,20 @@ th { background: var(--surface); color: var(--ink); font-weight: 700; white-spac
 .pular:focus { position: fixed !important; width: auto; height: auto; clip: auto; top: .6rem; left: .6rem; z-index: 99; background: #fff; padding: .6rem 1rem; border-radius: 8px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* Relacionados do silo */
+.relacionados { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.relacionados h2 { margin-top: 0; }
+.relacionados ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
+.relacionados li { margin: 0; }
+.relacionados a { display: block; padding: .9rem 1.1rem; background: var(--surface); border-radius: var(--r-sm); color: var(--ink); text-decoration: none; font-weight: 700; }
+.relacionados a:hover { background: var(--surface-2); color: var(--accent-ink); }
+.relacionados .pilar a { background: var(--accent-soft); }
+.relacionados .pilar span { display: block; font-size: .82rem; color: var(--muted); margin: .25rem 0 0 1.1rem; }
+.silo-bloco + .silo-bloco { margin-top: 3.5rem; }
+
+/* Mapa da área de atendimento */
+.mapa-grade { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(1.5rem, 5vw, 3.5rem); align-items: center; }
+.mapa { border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); background: var(--surface); aspect-ratio: 4 / 3; }
+.mapa iframe { width: 100%; height: 100%; border: 0; display: block; }
+@media (max-width: 860px) { .mapa-grade { grid-template-columns: 1fr; } .mapa { aspect-ratio: 1 / 1; } }

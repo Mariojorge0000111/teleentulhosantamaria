@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Migalhas from '../components/Migalhas.astro';
+import MapaAtendimento from '../components/MapaAtendimento.astro';
 import IconeWhats from '../components/IconeWhats.astro';
 import { SITE, linkWhatsapp } from '../config';
 const migalhas = [{ nome: 'Contato' }];
@@ -40,4 +41,5 @@ const schema = {
       <p style="margin-top:1.5rem">O {SITE.nome} é um canal de orçamento de caçambas em Santa Maria e região. O serviço é executado por empresa parceira do ramo, responsável pela entrega, pela retirada e pela destinação do entulho.</p>
     </div>
   </section>
+  <MapaAtendimento />
 </Base>

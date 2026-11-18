@@ -8,6 +8,7 @@ import IconeWhats from '../../components/IconeWhats.astro';
 import { linkWhatsapp, FONTES } from '../../config';
 import { SERVICOS, type Servico } from '../../data/servicos';
 import { BAIRROS } from '../../data/locais';
+import { SILOS, todosPosts } from '../../data/silos';
 
 export function getStaticPaths() {
   return SERVICOS.map((s) => ({ params: { slug: s.slug }, props: { s } }));
@@ -34,6 +35,14 @@ const schema = [
   },
 ];
 const wa = linkWhatsapp(s.mensagem);
+const siloDoServico: Record<string, string> = {
+  'aluguel-de-cacamba': 'contratar-cacamba',
+  'tamanhos-de-cacamba': 'tamanhos-e-calculo',
+  'recolhimento-de-entulho': 'regras-e-descarte',
+  'cacamba-para-obra-e-reforma': 'entulho-por-obra',
+};
+const silo = SILOS.find((x) => x.slug === siloDoServico[s.slug]);
+const guias = silo ? todosPosts().filter((p) => p.silo === silo.slug) : [];
 ---
 <Base title={s.titulo} description={s.descricao} schema={schema} migalhas={migalhas} mensagem={s.mensagem} preloadImg={s.imagem}>
   <header class="pagina-topo">
@@ -60,6 +69,14 @@ const wa = linkWhatsapp(s.mensagem);
         ))}
         <h2>Perguntas sobre {s.nome.toLowerCase()}</h2>
         <Faq itens={s.faq} />
+        {silo && guias.length > 0 && (
+          <nav class="relacionados" aria-label="Guias relacionados">
+            <p class="sobretitulo">{silo.nome}</p>
+            <h2>Guias sobre {s.nome.toLowerCase()}</h2>
+            <ul>{guias.map((g) => <li><a href={g.url}>{g.titulo}</a></li>)}</ul>
+            <p style="margin-top:1rem"><a class="link-seta" href={`/blog/categoria/${silo.slug}/`}>Ver todos os guias de {silo.nome.toLowerCase()}</a></p>
+          </nav>
+        )}
         <p class="fonte" style="margin-top:1.5rem">Regras citadas: <a href={FONTES.decreto146} target="_blank" rel="noopener">Decreto Executivo nº 146/2009</a> e <a href={FONTES.codigoPosturas} target="_blank" rel="noopener">Lei Complementar nº 92/2012</a> de Santa Maria.</p>
       </div>
       <aside class="lateral">

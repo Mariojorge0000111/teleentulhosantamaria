@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Cta from '../../components/Cta.astro';
 import Migalhas from '../../components/Migalhas.astro';
+import MapaAtendimento from '../../components/MapaAtendimento.astro';
 import { BAIRROS, CIDADES } from '../../data/locais';
 const migalhas = [{ nome: 'Bairros' }];
 const schema = {
@@ -42,5 +43,6 @@ const schema = {
       <ul class="chips">{CIDADES.map((c) => <li><a href={`/cidades/${c.slug}/`}>{c.nome}</a></li>)}</ul>
     </div>
   </section>
+  <MapaAtendimento />
   <Cta />
 </Base>

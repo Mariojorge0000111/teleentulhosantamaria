@@ -1,0 +1,49 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Img from '../../../components/Img.astro';
+import Cta from '../../../components/Cta.astro';
+import Migalhas from '../../../components/Migalhas.astro';
+import { SILOS, todosPosts, type Silo } from '../../../data/silos';
+
+export function getStaticPaths() {
+  return SILOS.map((s) => ({ params: { silo: s.slug }, props: { silo: s } }));
+}
+const { silo } = Astro.props as { silo: Silo };
+const posts = todosPosts().filter((p) => p.silo === silo.slug);
+const migalhas = [{ nome: 'Blog', href: '/blog/' }, { nome: silo.nome }];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: silo.titulo,
+  description: silo.descricao,
+  url: new URL(Astro.url.pathname, Astro.site).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: posts.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.titulo, url: new URL(p.url, Astro.site).href })),
+  },
+};
+---
+<Base title={silo.titulo} description={silo.descricao} schema={schema} migalhas={migalhas}>
+  <header class="pagina-topo">
+    <div class="wrap">
+      <Migalhas itens={migalhas} />
+      <h1>{silo.nome}</h1>
+      <p class="lead">{silo.intro}</p>
+      <div class="botoes"><a class="btn btn-claro" href={silo.pilar.href}>Guia principal: {silo.pilar.nome}</a></div>
+    </div>
+  </header>
+  <section class="secao">
+    <div class="wrap grade grade-3">
+      {posts.map((p) => (
+        <article class="card card-img card-link">
+          <Img nome={p.imagem} alt={p.imagemAlt} sizes="(max-width: 600px) 100vw, (max-width: 960px) 50vw, 360px" />
+          <div class="card-corpo">
+            <h2 style="font-size:1.12rem"><a href={p.url}>{p.titulo}</a></h2>
+            <p>{p.descricao}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+  <Cta />
+</Base>

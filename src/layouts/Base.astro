@@ -30,7 +30,14 @@ const organizacao = {
   url: base,
   logo: new URL('/favicon.svg', Astro.site).href,
   description: SITE.slogan,
-  areaServed: { '@type': 'City', name: 'Santa Maria', containedInPlace: { '@type': 'State', name: 'Rio Grande do Sul' } },
+  areaServed: {
+    '@type': 'City',
+    name: 'Santa Maria',
+    containedInPlace: { '@type': 'State', name: 'Rio Grande do Sul' },
+    geo: { '@type': 'GeoCoordinates', latitude: -29.6868, longitude: -53.8149 },
+    hasMap: 'https://www.google.com/maps/search/?api=1&query=Santa%20Maria%2C%20RS',
+    sameAs: 'https://pt.wikipedia.org/wiki/Santa_Maria_(Rio_Grande_do_Sul)',
+  },
   ...(SITE.telefone ? { telephone: SITE.telefone } : {}),
 };
 const site = {

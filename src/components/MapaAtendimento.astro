@@ -1,0 +1,26 @@
+---
+// Mapa da área de atendimento (Google Maps incorporado, carregado só quando chega perto da tela)
+interface Props { local?: string; titulo?: string; texto?: string }
+const {
+  local = 'Santa Maria, RS',
+  titulo = 'Área de atendimento: Santa Maria, RS',
+  texto = 'Atendemos Santa Maria e, conforme a agenda da empresa parceira, cidades vizinhas como Itaara, Silveira Martins, São Pedro do Sul, Restinga Sêca e Formigueiro.',
+} = Astro.props;
+const q = encodeURIComponent(local);
+const embed = `https://maps.google.com/maps?q=${q}&t=m&z=12&output=embed&hl=pt-BR`;
+const abrir = `https://www.google.com/maps/search/?api=1&query=${q}`;
+---
+<section class="secao mapa-secao" aria-labelledby="mapa-titulo">
+  <div class="wrap mapa-grade">
+    <div>
+      <p class="sobretitulo">Onde atendemos</p>
+      <h2 id="mapa-titulo">{titulo}</h2>
+      <p>{texto}</p>
+      <p class="fonte">O mapa mostra a área de atendimento, não um endereço de loja: a caçamba vai até a sua obra.</p>
+      <a class="link-seta" href={abrir} target="_blank" rel="noopener">Abrir no Google Maps</a>
+    </div>
+    <div class="mapa">
+      <iframe src={embed} title={`Mapa de ${local}`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

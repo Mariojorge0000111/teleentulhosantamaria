@@ -3,9 +3,8 @@ import Base from '../../layouts/Base.astro';
 import Img from '../../components/Img.astro';
 import Cta from '../../components/Cta.astro';
 import Migalhas from '../../components/Migalhas.astro';
-const posts = Object.values(import.meta.glob<any>('./*.md', { eager: true }))
-  .map((p) => ({ url: p.url, ...p.frontmatter }))
-  .sort((a, b) => (a.data < b.data ? 1 : -1));
+import { SILOS, todosPosts } from '../../data/silos';
+const posts = todosPosts();
 const migalhas = [{ nome: 'Blog' }];
 const schema = {
   '@context': 'https://schema.org',
@@ -25,21 +24,37 @@ const schema = {
     <div class="wrap">
       <Migalhas itens={migalhas} />
       <h1>Guias sobre caçamba e entulho</h1>
-      <p class="lead estreito">O que saber antes de pedir caçamba em Santa Maria: preço, tamanho, o que pode ir dentro e o que a prefeitura exige.</p>
+      <p class="lead">O que saber antes de pedir caçamba em Santa Maria, organizado por tema.</p>
+      <ul class="chips" style="margin-top:1.5rem">{SILOS.map((s) => <li><a href={`/blog/categoria/${s.slug}/`}>{s.nome}</a></li>)}</ul>
     </div>
   </header>
   <section class="secao">
-    <div class="wrap grade grade-3">
-      {posts.map((p) => (
-        <article class="card card-img card-link">
-          <Img nome={p.imagem} alt={p.imagemAlt} sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 370px" />
-          <div class="card-corpo">
-            <h2 style="font-size:1.15rem"><a href={p.url}>{p.titulo}</a></h2>
-            <p>{p.descricao}</p>
-            <span class="link-seta">Ler guia</span>
+    <div class="wrap">
+      {SILOS.map((s) => {
+        const lista = posts.filter((p) => p.silo === s.slug);
+        return (
+          <div class="silo-bloco">
+            <div class="cabeca">
+              <div>
+                <h2>{s.nome}</h2>
+                <p>{s.intro}</p>
+              </div>
+              <a class="link-seta" href={`/blog/categoria/${s.slug}/`}>Ver categoria</a>
+            </div>
+            <div class="grade grade-3 trilho">
+              {lista.slice(0, 3).map((p) => (
+                <article class="card card-img card-link">
+                  <Img nome={p.imagem} alt={p.imagemAlt} sizes="(max-width: 600px) 82vw, (max-width: 960px) 50vw, 360px" />
+                  <div class="card-corpo">
+                    <h3><a href={p.url}>{p.titulo}</a></h3>
+                    <p>{p.descricao}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        </article>
-      ))}
+        );
+      })}
     </div>
   </section>
   <Cta />

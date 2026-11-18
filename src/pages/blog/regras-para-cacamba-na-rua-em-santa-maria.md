@@ -4,6 +4,8 @@ titulo: "Caçamba na rua em Santa Maria: o que diz a lei e quem responde por qu�
 tituloSeo: "Caçamba na Rua em Santa Maria: Regras e Multas"
 descricao: "Regras para caçamba na rua em Santa Maria RS: limite de 5 m³, faixas reflexivas, CTR, entulho na calçada por até 6 horas e quando a multa é do contratante."
 data: "2026-11-18"
+silo: "regras-e-descarte"
+pilar: true
 imagem: "cacamba-estacionaria"
 imagemAlt: "Caçamba metálica estacionária encostada em uma parede, sobre piso de paver"
 palavraChave: "caçamba na rua precisa de licença santa maria"

@@ -4,6 +4,8 @@ titulo: "O que pode e o que não pode colocar na caçamba de entulho"
 tituloSeo: "O Que Pode e Não Pode na Caçamba de Entulho"
 descricao: "O que pode e o que não pode colocar na caçamba de entulho: lista por material, classes do Conama e as multas que Santa Maria RS prevê para o contratante."
 data: "2026-11-18"
+silo: "o-que-vai-na-cacamba"
+pilar: true
 imagem: "demolicao-residencial"
 imagemAlt: "Rua residencial com uma casa demolida e entulho de tijolos e concreto no terreno"
 palavraChave: "o que pode colocar na caçamba de entulho"
