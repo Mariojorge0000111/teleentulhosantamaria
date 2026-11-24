@@ -25,7 +25,7 @@ Site de aluguel (rank and rent) do Mário Jorge. Ranqueia no Google para tele en
 ## Analytics e Search Console
 - Google Analytics 4: propriedade "teleentulhosantamaria.com.br" (conta "Sites SVG", a401060034 / p565106086, fluxo 16370148776), ID `G-94MBZR8DC5`, em `src/components/Analytics.astro` (carregado no `Base`, a tag do Google só entra depois do `load`).
 - Evento `clique_whatsapp` em todo link wa.me, com `area` (topo, menu, capa, cta, barra_fixa, rodape, conteudo), `texto_link`, `pagina` e `tipo_pagina`.
-- Pendente: marcar `clique_whatsapp` como evento principal (estrela em Administrador > Eventos). Em 19/11/2026 o GA4 já recebia page_view, scroll e first_visit, mas ainda nenhum clique real no WhatsApp; nova checagem agendada para 22/11.
+- `clique_whatsapp` marcado como evento principal (conversão) no GA4 em 24/11/2026.
 - Search Console: propriedade de domínio `sc-domain:teleentulhosantamaria.com.br`, verificada pela Cloudflare (TXT) em 18/11/2026. Sitemap enviado e indexação da home pedida no mesmo dia.
 
 ## Regras de conteúdo
